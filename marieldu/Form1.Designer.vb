@@ -23,6 +23,12 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.sidebar = New System.Windows.Forms.Panel()
         Me.pnlsections = New System.Windows.Forms.Panel()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -51,6 +57,18 @@ Partial Class Form1
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.x = New System.Windows.Forms.Panel()
+        Me.dgvrejected = New System.Windows.Forms.DataGridView()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.course_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.sd = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.course_name = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.reservation_date = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.status = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.dgvrooms = New System.Windows.Forms.DataGridView()
+        Me.cboSection = New System.Windows.Forms.ComboBox()
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.sidebar.SuspendLayout()
         Me.pnlsections.SuspendLayout()
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -69,6 +87,12 @@ Partial Class Form1
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.phome.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel2.SuspendLayout()
+        Me.x.SuspendLayout()
+        CType(Me.dgvrejected, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel3.SuspendLayout()
+        Me.Panel4.SuspendLayout()
+        CType(Me.dgvrooms, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'sidebar
@@ -346,11 +370,184 @@ Partial Class Form1
         '
         Me.Panel2.BackgroundImage = CType(resources.GetObject("Panel2.BackgroundImage"), System.Drawing.Image)
         Me.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Panel2.Controls.Add(Me.Panel3)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel2.Location = New System.Drawing.Point(60, 53)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(1004, 628)
         Me.Panel2.TabIndex = 2
+        '
+        'x
+        '
+        Me.x.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.x.BackColor = System.Drawing.Color.Transparent
+        Me.x.Controls.Add(Me.dgvrejected)
+        Me.x.Location = New System.Drawing.Point(47, 34)
+        Me.x.Name = "x"
+        Me.x.Size = New System.Drawing.Size(401, 237)
+        Me.x.TabIndex = 3
+        '
+        'dgvrejected
+        '
+        Me.dgvrejected.AllowUserToAddRows = False
+        Me.dgvrejected.AllowUserToDeleteRows = False
+        Me.dgvrejected.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgvrejected.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.BlanchedAlmond
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Javanese Text", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.ControlLightLight
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvrejected.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
+        Me.dgvrejected.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvrejected.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.course_id, Me.sd, Me.course_name, Me.reservation_date, Me.status})
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Moccasin
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvrejected.DefaultCellStyle = DataGridViewCellStyle8
+        Me.dgvrejected.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dgvrejected.EnableHeadersVisualStyles = False
+        Me.dgvrejected.Location = New System.Drawing.Point(0, 0)
+        Me.dgvrejected.Name = "dgvrejected"
+        Me.dgvrejected.ReadOnly = True
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.PeachPuff
+        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.Desktop
+        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvrejected.RowHeadersDefaultCellStyle = DataGridViewCellStyle9
+        Me.dgvrejected.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvrejected.Size = New System.Drawing.Size(401, 237)
+        Me.dgvrejected.TabIndex = 1
+        '
+        'Panel3
+        '
+        Me.Panel3.BackColor = System.Drawing.Color.Transparent
+        Me.Panel3.Controls.Add(Me.Label9)
+        Me.Panel3.Controls.Add(Me.cboSection)
+        Me.Panel3.Controls.Add(Me.Panel4)
+        Me.Panel3.Controls.Add(Me.x)
+        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Panel3.Location = New System.Drawing.Point(0, 341)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(1004, 287)
+        Me.Panel3.TabIndex = 4
+        '
+        'course_id
+        '
+        Me.course_id.DataPropertyName = "room_number"
+        Me.course_id.HeaderText = "ID"
+        Me.course_id.Name = "course_id"
+        Me.course_id.ReadOnly = True
+        '
+        'sd
+        '
+        Me.sd.DataPropertyName = "reserved_by"
+        Me.sd.HeaderText = "Reserved By"
+        Me.sd.Name = "sd"
+        Me.sd.ReadOnly = True
+        '
+        'course_name
+        '
+        Me.course_name.DataPropertyName = "purpose"
+        Me.course_name.HeaderText = "Purpose"
+        Me.course_name.Name = "course_name"
+        Me.course_name.ReadOnly = True
+        '
+        'reservation_date
+        '
+        Me.reservation_date.DataPropertyName = "reservation_date"
+        Me.reservation_date.HeaderText = "Date"
+        Me.reservation_date.Name = "reservation_date"
+        Me.reservation_date.ReadOnly = True
+        '
+        'status
+        '
+        Me.status.DataPropertyName = "status"
+        Me.status.HeaderText = "Status"
+        Me.status.Name = "status"
+        Me.status.ReadOnly = True
+        '
+        'Panel4
+        '
+        Me.Panel4.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel4.BackColor = System.Drawing.Color.Transparent
+        Me.Panel4.Controls.Add(Me.dgvrooms)
+        Me.Panel4.Location = New System.Drawing.Point(476, 34)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(487, 237)
+        Me.Panel4.TabIndex = 4
+        '
+        'dgvrooms
+        '
+        Me.dgvrooms.AllowUserToAddRows = False
+        Me.dgvrooms.AllowUserToDeleteRows = False
+        Me.dgvrooms.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgvrooms.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
+        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle10.BackColor = System.Drawing.Color.BlanchedAlmond
+        DataGridViewCellStyle10.Font = New System.Drawing.Font("Javanese Text", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.ControlLightLight
+        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvrooms.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle10
+        Me.dgvrooms.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.Moccasin
+        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvrooms.DefaultCellStyle = DataGridViewCellStyle11
+        Me.dgvrooms.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dgvrooms.EnableHeadersVisualStyles = False
+        Me.dgvrooms.Location = New System.Drawing.Point(0, 0)
+        Me.dgvrooms.Name = "dgvrooms"
+        Me.dgvrooms.ReadOnly = True
+        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.PeachPuff
+        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.Desktop
+        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvrooms.RowHeadersDefaultCellStyle = DataGridViewCellStyle12
+        Me.dgvrooms.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvrooms.Size = New System.Drawing.Size(487, 237)
+        Me.dgvrooms.TabIndex = 1
+        '
+        'cboSection
+        '
+        Me.cboSection.FormattingEnabled = True
+        Me.cboSection.Location = New System.Drawing.Point(476, 8)
+        Me.cboSection.Margin = New System.Windows.Forms.Padding(2)
+        Me.cboSection.Name = "cboSection"
+        Me.cboSection.Size = New System.Drawing.Size(132, 21)
+        Me.cboSection.TabIndex = 6
+        '
+        'Label9
+        '
+        Me.Label9.BackColor = System.Drawing.Color.White
+        Me.Label9.Font = New System.Drawing.Font("Modern No. 20", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(44, 8)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(114, 23)
+        Me.Label9.TabIndex = 7
+        Me.Label9.Text = "Reservation Pendings"
+        Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Form1
         '
@@ -391,6 +588,12 @@ Partial Class Form1
         Me.phome.ResumeLayout(False)
         Me.phome.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel2.ResumeLayout(False)
+        Me.x.ResumeLayout(False)
+        CType(Me.dgvrejected, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel3.ResumeLayout(False)
+        Me.Panel4.ResumeLayout(False)
+        CType(Me.dgvrooms, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -422,5 +625,17 @@ Partial Class Form1
     Friend WithEvents pnlsections As System.Windows.Forms.Panel
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents PictureBox9 As System.Windows.Forms.PictureBox
+    Friend WithEvents x As System.Windows.Forms.Panel
+    Friend WithEvents dgvrejected As System.Windows.Forms.DataGridView
+    Friend WithEvents Panel3 As System.Windows.Forms.Panel
+    Friend WithEvents Panel4 As System.Windows.Forms.Panel
+    Friend WithEvents dgvrooms As System.Windows.Forms.DataGridView
+    Friend WithEvents course_id As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents sd As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents course_name As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents reservation_date As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents status As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents cboSection As System.Windows.Forms.ComboBox
+    Friend WithEvents Label9 As System.Windows.Forms.Label
 
 End Class

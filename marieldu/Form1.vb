@@ -1,7 +1,9 @@
 ﻿Public Class Form1
 
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-
+        Call connection()
+        frmReservation.PopulateFilterComboBox(cboSection, "SELECT DISTINCT section_name FROM sections ORDER BY section_name", "section_name")
+        Call loaddata("select rooms.room_number, reservations.reserved_by, reservations.purpose, reservations.reservation_date, reservations.status from reservations join rooms on reservations.room_id = rooms.room_id where status like '%Pending%'", dgvrejected)
     End Sub
 
     'Form Design
@@ -120,5 +122,23 @@
 
         frmLogIn.txtpass.Clear()
         frmLogIn.txtusername.Clear()
+    End Sub
+
+    Private Sub cboSection_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboSection.SelectedIndexChanged
+        Dim query As String = "SELECT s.schedule_id AS 'ID', sec.section_name AS 'Section', " &
+                              "sub.subject_title AS 'Subject', CONCAT(t.titles, ' ', t.last_name) AS 'Teacher', " &
+                              "r.room_number AS 'Room', s.day_of_week AS 'Day of Week', " &
+                              "TIME_FORMAT(s.start_time, '%h:%i %p') AS 'Start Time', " &
+                              "TIME_FORMAT(s.end_time, '%h:%i %p') AS 'End Time', " &
+                              "s.academic_year AS 'Academic Year' " &
+                              "FROM schedules s " &
+                              "INNER JOIN sections sec ON s.section_id = sec.section_id " &
+                              "INNER JOIN subjects sub ON s.subject_id = sub.subject_id " &
+                              "INNER JOIN teachers t ON s.teacher_id = t.teacher_id " &
+                              "INNER JOIN rooms r ON s.room_id = r.room_id WHERE 1=1"
+        If cboSection.SelectedIndex > 0 Then
+            query &= " AND sec.section_name = '" & cboSection.Text.Replace("'", "''") & "'"
+        End If
+        Call loaddata(query, dgvrooms)
     End Sub
 End Class
