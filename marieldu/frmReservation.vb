@@ -1,0 +1,225 @@
+﻿Public Class frmReservation
+
+    Private Sub Reservation_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        Call connection()
+        PopulateFilterComboBox(cboSection, "SELECT DISTINCT section_name FROM sections ORDER BY section_name", "section_name")
+        PopulateFilterComboBox(cboSubject, "SELECT DISTINCT subject_title FROM subjects ORDER BY subject_title", "subject_title")
+        PopulateFilterComboBox(cboTeacher, "SELECT DISTINCT CONCAT(titles, ' ', last_name) AS teacher_name FROM teachers ORDER BY last_name", "teacher_name")
+        PopulateFilterComboBox(cboRoom, "SELECT DISTINCT room_number FROM rooms ORDER BY room_number", "room_number")
+
+        cboYear.Items.Clear()
+        cboYear.Items.Add("All")
+        cboYear.Items.Add("2026-2027")
+        cboYear.Items.Add("2025-2026")
+        cboYear.SelectedIndex = 0
+        Call loaddata("SELECT s.schedule_id AS 'ID', sec.section_name AS 'Section', sub.subject_title AS 'Subject', CONCAT(t.titles, ' ', t.last_name) AS 'Teacher', r.room_number AS 'Room', s.day_of_week AS 'Day of Week', TIME_FORMAT(s.start_time, '%h:%i %p') AS 'Start Time', TIME_FORMAT(s.end_time, '%h:%i %p') AS 'End Time', s.academic_year AS 'Academic Year' FROM schedules s INNER JOIN sections sec ON s.section_id = sec.section_id INNER JOIN subjects sub ON s.subject_id = sub.subject_id INNER JOIN teachers t ON s.teacher_id = t.teacher_id INNER JOIN rooms r ON s.room_id = r.room_id ORDER BY s.schedule_id DESC", dgvrooms)
+    End Sub
+    Private Sub PopulateFilterComboBox(cbo As ComboBox, query As String, columnName As String)
+        cbo.Items.Clear()
+        cbo.Items.Add("All")
+
+        Dim cmd As New Odbc.OdbcCommand(query, con)
+        Dim dr As Odbc.OdbcDataReader = cmd.ExecuteReader()
+
+        While dr.Read()
+            cbo.Items.Add(dr(columnName).ToString())
+        End While
+        dr.Close()
+
+        cbo.SelectedIndex = 0
+    End Sub
+
+    Public Sub LoadScheduleData()
+        Dim query As String = "SELECT s.schedule_id AS 'ID', sec.section_name AS 'Section', " &
+                              "sub.subject_title AS 'Subject', CONCAT(t.titles, ' ', t.last_name) AS 'Teacher', " &
+                              "r.room_number AS 'Room', s.day_of_week AS 'Day of Week', " &
+                              "TIME_FORMAT(s.start_time, '%h:%i %p') AS 'Start Time', " &
+                              "TIME_FORMAT(s.end_time, '%h:%i %p') AS 'End Time', " &
+                              "s.academic_year AS 'Academic Year' " &
+                              "FROM schedules s " &
+                              "INNER JOIN sections sec ON s.section_id = sec.section_id " &
+                              "INNER JOIN subjects sub ON s.subject_id = sub.subject_id " &
+                              "INNER JOIN teachers t ON s.teacher_id = t.teacher_id " &
+                              "INNER JOIN rooms r ON s.room_id = r.room_id WHERE 1=1"
+
+        If cboSection.SelectedIndex > 0 Then
+            query &= " AND sec.section_name = '" & cboSection.Text.Replace("'", "''") & "'"
+        End If
+        If cboSubject.SelectedIndex > 0 Then
+            query &= " AND sub.subject_title = '" & cboSubject.Text.Replace("'", "''") & "'"
+        End If
+        If cboTeacher.SelectedIndex > 0 Then
+            query &= " AND CONCAT(t.titles, ' ', t.last_name) = '" & cboTeacher.Text.Replace("'", "''") & "'"
+        End If
+        If cboRoom.SelectedIndex > 0 Then
+            query &= " AND r.room_number = '" & cboRoom.Text.Replace("'", "''") & "'"
+        End If
+        If cboYear.SelectedIndex > 0 Then
+            query &= " AND s.academic_year = '" & cboYear.Text.Replace("'", "''") & "'"
+        End If
+
+        query &= " ORDER BY s.schedule_id DESC"
+
+        Call loaddata(query, dgvrooms)
+    End Sub
+
+    Private Sub Filter_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboSection.SelectedIndexChanged, cboSubject.SelectedIndexChanged, cboTeacher.SelectedIndexChanged, cboRoom.SelectedIndexChanged, cboYear.SelectedIndexChanged
+        LoadScheduleData()
+    End Sub
+
+    Private Sub dgvrooms_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvrooms.CellClick
+        If e.RowIndex >= 0 Then
+            dgvrooms.Tag = dgvrooms.Item(0, e.RowIndex).Value
+        End If
+    End Sub
+
+    Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnadd.Click
+        dgvrooms.Tag = 0
+        frmScheduleAdd.ShowDialog()
+    End Sub
+
+    Private Sub btnEdit_Click(sender As Object, e As EventArgs) Handles btnEdit.Click
+        If Val(dgvrooms.Tag) = 0 Then
+            MsgBox("Please click a schedule row first!", MsgBoxStyle.Information)
+        Else
+            Dim editForm As New frmScheduleEdit()
+            editForm.Tag = dgvrooms.Tag
+            editForm.ShowDialog()
+        End If
+    End Sub
+
+    Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
+        If Val(dgvrooms.Tag) = 0 Then
+            MsgBox("Please select a schedule to delete!", MsgBoxStyle.Information)
+        Else
+            Dim res As DialogResult = MessageBox.Show("Are you sure you want to delete this schedule?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+            If res = DialogResult.Yes Then
+                If con.State = ConnectionState.Closed Then con.Open()
+                Dim cmd As New Odbc.OdbcCommand("DELETE FROM schedules WHERE schedule_id=" & Val(dgvrooms.Tag), con)
+                cmd.ExecuteNonQuery()
+                con.Close()
+
+                dgvrooms.Tag = 0
+                LoadScheduleData()
+                MsgBox("Schedule deleted successfully!", MsgBoxStyle.Information)
+            End If
+        End If
+    End Sub
+
+    'Form Design
+    Private Sub Panel1_MouseEnter(ByVal sender As Object, ByVal e As System.EventArgs) Handles sidebar.MouseEnter
+        sidebar.Width = 176
+    End Sub
+
+    Private Sub Panel1_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles sidebar.MouseLeave
+        sidebar.Width = 60
+    End Sub
+
+    Private Sub Panel2_MouseEnter(ByVal sender As Object, ByVal e As System.EventArgs) Handles phome.MouseEnter
+        sidebar.Width = 176
+        phome.BackColor = Color.PeachPuff
+    End Sub
+
+    Private Sub Panel2_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles phome.MouseLeave
+        phome.BackColor = Color.Transparent
+    End Sub
+
+    Private Sub preservation_MouseEnter(ByVal sender As Object, ByVal e As System.EventArgs) Handles preservation.MouseEnter
+        sidebar.Width = 176
+    End Sub
+
+    Private Sub proom_MouseEnter(ByVal sender As Object, ByVal e As System.EventArgs) Handles proom.MouseEnter
+        sidebar.Width = 176
+        proom.BackColor = Color.PeachPuff
+    End Sub
+
+    Private Sub proom_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles proom.MouseLeave
+        proom.BackColor = Color.Transparent
+    End Sub
+
+    Private Sub psubs_MouseEnter(ByVal sender As Object, ByVal e As System.EventArgs) Handles psubs.MouseEnter
+        sidebar.Width = 176
+        psubs.BackColor = Color.PeachPuff
+    End Sub
+
+    Private Sub psubs_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles psubs.MouseLeave
+        psubs.BackColor = Color.Transparent
+    End Sub
+
+    Private Sub pcourses_MouseEnter(ByVal sender As Object, ByVal e As System.EventArgs) Handles pcourses.MouseEnter
+        sidebar.Width = 176
+        pcourses.BackColor = Color.PeachPuff
+    End Sub
+
+    Private Sub pcourses_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles pcourses.MouseLeave
+        pcourses.BackColor = Color.Transparent
+    End Sub
+
+    Private Sub plogout_MouseEnter(ByVal sender As Object, ByVal e As System.EventArgs) Handles plogout.MouseEnter
+        sidebar.Width = 176
+        plogout.BackColor = Color.PeachPuff
+    End Sub
+
+    Private Sub plogout_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles plogout.MouseLeave
+        plogout.BackColor = Color.Transparent
+    End Sub
+
+    Private Sub Panel1_MouseEnter1(ByVal sender As Object, ByVal e As System.EventArgs) Handles pinstructors.MouseEnter
+        sidebar.Width = 176
+        pinstructors.BackColor = Color.PeachPuff
+    End Sub
+
+    Private Sub Panel1_MouseLeave1(ByVal sender As Object, ByVal e As System.EventArgs) Handles pinstructors.MouseLeave
+        pinstructors.BackColor = Color.Transparent
+    End Sub
+
+    Private Sub pnlsections_MouseEnter(sender As Object, e As EventArgs) Handles pnlsections.MouseEnter
+        sidebar.Width = 176
+        pnlsections.BackColor = Color.PeachPuff
+    End Sub
+
+    Private Sub pnlsections_MouseLeave(sender As Object, e As EventArgs) Handles pnlsections.MouseLeave
+        pnlsections.BackColor = Color.Transparent
+    End Sub
+
+    'Navigation ---------------------------------------------------------------------------------------
+    Private Sub phome_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles phome.Click
+        Form1.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub proom_MouseClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles proom.MouseClick
+        frmRooms.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub pinstructors_MouseClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles pinstructors.MouseClick
+        frmInstructors.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub psubs_MouseClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles psubs.MouseClick
+        frmSubjects.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub pcourses_MouseClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles pcourses.MouseClick
+        frmCourses.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub pnlsections_MouseClick(sender As Object, e As MouseEventArgs) Handles pnlsections.MouseClick
+        frmSection.Show()
+        Me.Hide()
+    End Sub
+    Private Sub plogout_MouseClick(sender As Object, e As MouseEventArgs) Handles plogout.MouseClick
+        frmLogIn.Show()
+        Me.Hide()
+        frmLogIn.txtpass.Clear()
+        frmLogIn.txtusername.Clear()
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        frmReserve.ShowDialog()
+    End Sub
+End Class

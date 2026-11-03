@@ -1,0 +1,11 @@
+C:\Users\windows10\AppData\Local\Temporary Projects\prac\bin\Debug\prac.exe
+C:\Users\windows10\AppData\Local\Temporary Projects\prac\bin\Debug\prac.pdb
+C:\Users\windows10\AppData\Local\Temporary Projects\prac\bin\Debug\prac.xml
+C:\Users\windows10\AppData\Local\Temporary Projects\prac\obj\x86\Debug\prac.Form1.resources
+C:\Users\windows10\AppData\Local\Temporary Projects\prac\obj\x86\Debug\prac.Resources.resources
+C:\Users\windows10\AppData\Local\Temporary Projects\prac\obj\x86\Debug\prac.vbproj.GenerateResource.Cache
+C:\Users\windows10\AppData\Local\Temporary Projects\prac\obj\x86\Debug\prac.exe
+C:\Users\windows10\AppData\Local\Temporary Projects\prac\obj\x86\Debug\prac.xml
+C:\Users\windows10\AppData\Local\Temporary Projects\prac\obj\x86\Debug\prac.pdb
+C:\Users\windows10\AppData\Local\Temporary Projects\prac\obj\x86\Debug\prac.frmReservation.resources
+C:\Users\windows10\AppData\Local\Temporary Projects\prac\obj\x86\Debug\prac.frmRooms.resources

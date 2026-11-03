@@ -1,0 +1,402 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{071121E9-98A4-43BE-871B-C06BB84B63BE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>prac.My.MyApplication</StartupObject>
+    <RootNamespace>prac</RootNamespace>
+    <AssemblyName>marieldu</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>marieldu.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>marieldu.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCourses.Designer.vb">
+      <DependentUpon>frmCourses.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCourses.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCoursesAdd.Designer.vb">
+      <DependentUpon>frmCoursesAdd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCoursesAdd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCoursesEdit.Designer.vb">
+      <DependentUpon>frmCoursesEdit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCoursesEdit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInsAddChoice.Designer.vb">
+      <DependentUpon>frmInsAddChoice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmInsAddChoice.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInstructorAdd.Designer.vb">
+      <DependentUpon>frmInstructorAdd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmInstructorAdd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frminstructorEdit.Designer.vb">
+      <DependentUpon>frminstructorEdit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frminstructorEdit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInstructors.Designer.vb">
+      <DependentUpon>frmInstructors.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmInstructors.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInstructorsAdd%28availability%29.Designer.vb">
+      <DependentUpon>frmInstructorsAdd%28availability%29.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmInstructorsAdd%28availability%29.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogIn.Designer.vb">
+      <DependentUpon>frmLogIn.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogIn.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReserve.Designer.vb">
+      <DependentUpon>frmReserve.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReserve.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReserveAdd.Designer.vb">
+      <DependentUpon>frmReserveAdd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReserveAdd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRooms.Designer.vb">
+      <DependentUpon>frmRooms.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRooms.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRoomsAdd.Designer.vb">
+      <DependentUpon>frmRoomsAdd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRoomsAdd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRoomsEdit.Designer.vb">
+      <DependentUpon>frmRoomsEdit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRoomsEdit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmScheduleAdd.Designer.vb">
+      <DependentUpon>frmScheduleAdd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmScheduleAdd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmScheduleEdit.Designer.vb">
+      <DependentUpon>frmScheduleEdit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmScheduleEdit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSection.Designer.vb">
+      <DependentUpon>frmSection.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSection.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSectionsAdd.Designer.vb">
+      <DependentUpon>frmSectionsAdd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSectionsAdd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSectionsEdit.Designer.vb">
+      <DependentUpon>frmSectionsEdit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSectionsEdit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSubjects.Designer.vb">
+      <DependentUpon>frmSubjects.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSubjects.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSubjectsAdd.Designer.vb">
+      <DependentUpon>frmSubjectsAdd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSubjectsAdd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSubjectsEdit.Designer.vb">
+      <DependentUpon>frmSubjectsEdit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSubjectsEdit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frnSignUp.Designer.vb">
+      <DependentUpon>frnSignUp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frnSignUp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modcon.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="frmReservation.Designer.vb">
+      <DependentUpon>frmReservation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReservation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCourses.resx">
+      <DependentUpon>frmCourses.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCoursesAdd.resx">
+      <DependentUpon>frmCoursesAdd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCoursesEdit.resx">
+      <DependentUpon>frmCoursesEdit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInsAddChoice.resx">
+      <DependentUpon>frmInsAddChoice.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInstructorAdd.resx">
+      <DependentUpon>frmInstructorAdd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frminstructorEdit.resx">
+      <DependentUpon>frminstructorEdit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInstructors.resx">
+      <DependentUpon>frmInstructors.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInstructorsAdd%28availability%29.resx">
+      <DependentUpon>frmInstructorsAdd%28availability%29.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogIn.resx">
+      <DependentUpon>frmLogIn.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReserve.resx">
+      <DependentUpon>frmReserve.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReserveAdd.resx">
+      <DependentUpon>frmReserveAdd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRooms.resx">
+      <DependentUpon>frmRooms.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRoomsAdd.resx">
+      <DependentUpon>frmRoomsAdd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRoomsEdit.resx">
+      <DependentUpon>frmRoomsEdit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmScheduleAdd.resx">
+      <DependentUpon>frmScheduleAdd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmScheduleEdit.resx">
+      <DependentUpon>frmScheduleEdit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSection.resx">
+      <DependentUpon>frmSection.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSectionsAdd.resx">
+      <DependentUpon>frmSectionsAdd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSectionsEdit.resx">
+      <DependentUpon>frmSectionsEdit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSubjects.resx">
+      <DependentUpon>frmSubjects.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSubjectsAdd.resx">
+      <DependentUpon>frmSubjectsAdd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSubjectsEdit.resx">
+      <DependentUpon>frmSubjectsEdit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frnSignUp.resx">
+      <DependentUpon>frnSignUp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReservation.resx">
+      <DependentUpon>frmReservation.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-reservation-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-log-out-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-user-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-course-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-book-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-training-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-room-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-home-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-striped-patterns-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\teresa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-add-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-edit-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-delete-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-class-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-user-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-locked-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-eye-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-search-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-search-15.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
