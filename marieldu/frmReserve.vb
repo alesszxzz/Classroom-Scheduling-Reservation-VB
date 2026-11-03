@@ -14,7 +14,23 @@
     End Sub
 
     Public Sub LoadReservations()
-        ' Fetch reservations joined with room numbers
+        If con.State = ConnectionState.Closed Then con.Open()
+        Dim autoCompleteQuery As String = "UPDATE reservations " &
+                                           "SET status = 'Completed' " &
+                                           "WHERE status = 'Approved' " &
+                                           "AND (" &
+                                           "    reservation_date < CURRENT_DATE() " &
+                                           "    OR (reservation_date = CURRENT_DATE() AND end_time <= CURRENT_TIME())" &
+                                           ")"
+
+        Try
+            Using cmdUpdate As New Odbc.OdbcCommand(autoCompleteQuery, con)
+                cmdUpdate.ExecuteNonQuery()
+            End Using
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+
         Dim query As String = "SELECT r.reservation_id AS 'ID', rm.room_number AS 'Room', " &
                               "DATE_FORMAT(r.reservation_date, '%Y-%m-%d') AS 'Date', " &
                               "CONCAT(TIME_FORMAT(r.start_time, '%h:%i %p'), ' - ', TIME_FORMAT(r.end_time, '%h:%i %p')) AS 'Time Block', " &
