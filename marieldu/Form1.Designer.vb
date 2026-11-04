@@ -79,7 +79,7 @@ Partial Class Form1
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.dgvrooms = New System.Windows.Forms.DataGridView()
         Me.x = New System.Windows.Forms.Panel()
-        Me.dgvrejected = New System.Windows.Forms.DataGridView()
+        Me.dgvpendings = New System.Windows.Forms.DataGridView()
         Me.course_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.sd = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.course_name = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -113,7 +113,7 @@ Partial Class Form1
         Me.Panel4.SuspendLayout()
         CType(Me.dgvrooms, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.x.SuspendLayout()
-        CType(Me.dgvrejected, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvpendings, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'sidebar
@@ -130,7 +130,7 @@ Partial Class Form1
         Me.sidebar.Controls.Add(Me.phome)
         Me.sidebar.Dock = System.Windows.Forms.DockStyle.Left
         Me.sidebar.Location = New System.Drawing.Point(0, 0)
-        Me.sidebar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.sidebar.Margin = New System.Windows.Forms.Padding(4)
         Me.sidebar.Name = "sidebar"
         Me.sidebar.Size = New System.Drawing.Size(80, 838)
         Me.sidebar.TabIndex = 0
@@ -140,7 +140,7 @@ Partial Class Form1
         Me.pnlsections.Controls.Add(Me.Label8)
         Me.pnlsections.Controls.Add(Me.PictureBox9)
         Me.pnlsections.Location = New System.Drawing.Point(0, 508)
-        Me.pnlsections.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.pnlsections.Margin = New System.Windows.Forms.Padding(4)
         Me.pnlsections.Name = "pnlsections"
         Me.pnlsections.Size = New System.Drawing.Size(231, 74)
         Me.pnlsections.TabIndex = 9
@@ -161,7 +161,7 @@ Partial Class Form1
         Me.PictureBox9.BackgroundImage = Global.prac.My.Resources.Resources.icons8_class_24
         Me.PictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox9.Location = New System.Drawing.Point(17, 18)
-        Me.PictureBox9.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox9.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox9.Name = "PictureBox9"
         Me.PictureBox9.Size = New System.Drawing.Size(40, 37)
         Me.PictureBox9.TabIndex = 1
@@ -172,7 +172,7 @@ Partial Class Form1
         Me.pinstructors.Controls.Add(Me.Label7)
         Me.pinstructors.Controls.Add(Me.PictureBox8)
         Me.pinstructors.Location = New System.Drawing.Point(0, 287)
-        Me.pinstructors.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.pinstructors.Margin = New System.Windows.Forms.Padding(4)
         Me.pinstructors.Name = "pinstructors"
         Me.pinstructors.Size = New System.Drawing.Size(231, 74)
         Me.pinstructors.TabIndex = 8
@@ -193,7 +193,7 @@ Partial Class Form1
         Me.PictureBox8.BackgroundImage = Global.prac.My.Resources.Resources.icons8_training_24
         Me.PictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox8.Location = New System.Drawing.Point(17, 18)
-        Me.PictureBox8.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox8.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox8.Name = "PictureBox8"
         Me.PictureBox8.Size = New System.Drawing.Size(40, 37)
         Me.PictureBox8.TabIndex = 1
@@ -204,7 +204,7 @@ Partial Class Form1
         Me.PictureBox7.BackgroundImage = Global.prac.My.Resources.Resources.teresa
         Me.PictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox7.Location = New System.Drawing.Point(5, 4)
-        Me.PictureBox7.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox7.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox7.Name = "PictureBox7"
         Me.PictureBox7.Size = New System.Drawing.Size(71, 62)
         Me.PictureBox7.TabIndex = 7
@@ -216,7 +216,7 @@ Partial Class Form1
         Me.plogout.Controls.Add(Me.Label6)
         Me.plogout.Controls.Add(Me.PictureBox6)
         Me.plogout.Location = New System.Drawing.Point(0, 758)
-        Me.plogout.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.plogout.Margin = New System.Windows.Forms.Padding(4)
         Me.plogout.Name = "plogout"
         Me.plogout.Size = New System.Drawing.Size(232, 74)
         Me.plogout.TabIndex = 6
@@ -237,7 +237,7 @@ Partial Class Form1
         Me.PictureBox6.BackgroundImage = CType(resources.GetObject("PictureBox6.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox6.Location = New System.Drawing.Point(17, 18)
-        Me.PictureBox6.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox6.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox6.Name = "PictureBox6"
         Me.PictureBox6.Size = New System.Drawing.Size(40, 37)
         Me.PictureBox6.TabIndex = 1
@@ -248,7 +248,7 @@ Partial Class Form1
         Me.pcourses.Controls.Add(Me.Label5)
         Me.pcourses.Controls.Add(Me.PictureBox5)
         Me.pcourses.Location = New System.Drawing.Point(0, 434)
-        Me.pcourses.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.pcourses.Margin = New System.Windows.Forms.Padding(4)
         Me.pcourses.Name = "pcourses"
         Me.pcourses.Size = New System.Drawing.Size(231, 74)
         Me.pcourses.TabIndex = 5
@@ -269,7 +269,7 @@ Partial Class Form1
         Me.PictureBox5.BackgroundImage = Global.prac.My.Resources.Resources.icons8_course_24
         Me.PictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox5.Location = New System.Drawing.Point(17, 18)
-        Me.PictureBox5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox5.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox5.Name = "PictureBox5"
         Me.PictureBox5.Size = New System.Drawing.Size(40, 37)
         Me.PictureBox5.TabIndex = 1
@@ -280,7 +280,7 @@ Partial Class Form1
         Me.psubs.Controls.Add(Me.Label4)
         Me.psubs.Controls.Add(Me.PictureBox4)
         Me.psubs.Location = New System.Drawing.Point(0, 361)
-        Me.psubs.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.psubs.Margin = New System.Windows.Forms.Padding(4)
         Me.psubs.Name = "psubs"
         Me.psubs.Size = New System.Drawing.Size(231, 74)
         Me.psubs.TabIndex = 4
@@ -301,7 +301,7 @@ Partial Class Form1
         Me.PictureBox4.BackgroundImage = Global.prac.My.Resources.Resources.icons8_book_24
         Me.PictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox4.Location = New System.Drawing.Point(17, 18)
-        Me.PictureBox4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox4.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.Size = New System.Drawing.Size(40, 37)
         Me.PictureBox4.TabIndex = 1
@@ -312,7 +312,7 @@ Partial Class Form1
         Me.proom.Controls.Add(Me.Label3)
         Me.proom.Controls.Add(Me.PictureBox3)
         Me.proom.Location = New System.Drawing.Point(0, 213)
-        Me.proom.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.proom.Margin = New System.Windows.Forms.Padding(4)
         Me.proom.Name = "proom"
         Me.proom.Size = New System.Drawing.Size(231, 74)
         Me.proom.TabIndex = 3
@@ -333,7 +333,7 @@ Partial Class Form1
         Me.PictureBox3.BackgroundImage = Global.prac.My.Resources.Resources.icons8_room_24
         Me.PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox3.Location = New System.Drawing.Point(17, 18)
-        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(40, 37)
         Me.PictureBox3.TabIndex = 1
@@ -344,7 +344,7 @@ Partial Class Form1
         Me.preservation.Controls.Add(Me.Label2)
         Me.preservation.Controls.Add(Me.PictureBox2)
         Me.preservation.Location = New System.Drawing.Point(0, 139)
-        Me.preservation.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.preservation.Margin = New System.Windows.Forms.Padding(4)
         Me.preservation.Name = "preservation"
         Me.preservation.Size = New System.Drawing.Size(231, 74)
         Me.preservation.TabIndex = 2
@@ -365,7 +365,7 @@ Partial Class Form1
         Me.PictureBox2.BackgroundImage = Global.prac.My.Resources.Resources.icons8_reservation_24
         Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox2.Location = New System.Drawing.Point(17, 18)
-        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(40, 37)
         Me.PictureBox2.TabIndex = 1
@@ -377,7 +377,7 @@ Partial Class Form1
         Me.phome.Controls.Add(Me.Label1)
         Me.phome.Controls.Add(Me.PictureBox1)
         Me.phome.Location = New System.Drawing.Point(0, 65)
-        Me.phome.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.phome.Margin = New System.Windows.Forms.Padding(4)
         Me.phome.Name = "phome"
         Me.phome.Size = New System.Drawing.Size(231, 74)
         Me.phome.TabIndex = 1
@@ -398,7 +398,7 @@ Partial Class Form1
         Me.PictureBox1.BackgroundImage = Global.prac.My.Resources.Resources.icons8_home_24
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox1.Location = New System.Drawing.Point(17, 18)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(40, 37)
         Me.PictureBox1.TabIndex = 1
@@ -409,7 +409,7 @@ Partial Class Form1
         Me.Panel1.BackColor = System.Drawing.Color.Tan
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(80, 0)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1339, 65)
         Me.Panel1.TabIndex = 1
@@ -422,7 +422,7 @@ Partial Class Form1
         Me.Panel2.Controls.Add(Me.Panel3)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel2.Location = New System.Drawing.Point(80, 65)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(1339, 773)
         Me.Panel2.TabIndex = 2
@@ -435,7 +435,7 @@ Partial Class Form1
         Me.Panel7.Controls.Add(Me.Panel6)
         Me.Panel7.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel7.Location = New System.Drawing.Point(0, 396)
-        Me.Panel7.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel7.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel7.Name = "Panel7"
         Me.Panel7.Size = New System.Drawing.Size(1339, 377)
         Me.Panel7.TabIndex = 7
@@ -445,7 +445,7 @@ Partial Class Form1
         Me.Panel8.BackColor = System.Drawing.Color.Beige
         Me.Panel8.Controls.Add(Me.Panel5)
         Me.Panel8.Location = New System.Drawing.Point(647, 74)
-        Me.Panel8.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel8.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel8.Name = "Panel8"
         Me.Panel8.Size = New System.Drawing.Size(412, 274)
         Me.Panel8.TabIndex = 9
@@ -457,7 +457,7 @@ Partial Class Form1
         Me.Panel5.Controls.Add(Me.lblmostbook)
         Me.Panel5.Controls.Add(Me.Label11)
         Me.Panel5.Location = New System.Drawing.Point(29, 22)
-        Me.Panel5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel5.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(359, 233)
         Me.Panel5.TabIndex = 5
@@ -501,7 +501,7 @@ Partial Class Form1
         Me.Panel6.BackColor = System.Drawing.Color.White
         Me.Panel6.Controls.Add(Me.dgvAccepted)
         Me.Panel6.Location = New System.Drawing.Point(63, 75)
-        Me.Panel6.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel6.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel6.Name = "Panel6"
         Me.Panel6.Size = New System.Drawing.Size(535, 268)
         Me.Panel6.TabIndex = 6
@@ -533,7 +533,7 @@ Partial Class Form1
         Me.dgvAccepted.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvAccepted.EnableHeadersVisualStyles = False
         Me.dgvAccepted.Location = New System.Drawing.Point(0, 0)
-        Me.dgvAccepted.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.dgvAccepted.Margin = New System.Windows.Forms.Padding(4)
         Me.dgvAccepted.Name = "dgvAccepted"
         Me.dgvAccepted.ReadOnly = True
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
@@ -592,7 +592,7 @@ Partial Class Form1
         Me.Panel3.Controls.Add(Me.x)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel3.Location = New System.Drawing.Point(0, 0)
-        Me.Panel3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel3.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(1339, 330)
         Me.Panel3.TabIndex = 4
@@ -626,7 +626,7 @@ Partial Class Form1
         Me.Panel4.BackColor = System.Drawing.Color.Transparent
         Me.Panel4.Controls.Add(Me.dgvrooms)
         Me.Panel4.Location = New System.Drawing.Point(635, 42)
-        Me.Panel4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel4.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(649, 268)
         Me.Panel4.TabIndex = 4
@@ -657,7 +657,7 @@ Partial Class Form1
         Me.dgvrooms.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvrooms.EnableHeadersVisualStyles = False
         Me.dgvrooms.Location = New System.Drawing.Point(0, 0)
-        Me.dgvrooms.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.dgvrooms.Margin = New System.Windows.Forms.Padding(4)
         Me.dgvrooms.Name = "dgvrooms"
         Me.dgvrooms.ReadOnly = True
         DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
@@ -677,19 +677,19 @@ Partial Class Form1
         Me.x.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.x.BackColor = System.Drawing.Color.Transparent
-        Me.x.Controls.Add(Me.dgvrejected)
+        Me.x.Controls.Add(Me.dgvpendings)
         Me.x.Location = New System.Drawing.Point(63, 42)
-        Me.x.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.x.Margin = New System.Windows.Forms.Padding(4)
         Me.x.Name = "x"
         Me.x.Size = New System.Drawing.Size(535, 268)
         Me.x.TabIndex = 3
         '
-        'dgvrejected
+        'dgvpendings
         '
-        Me.dgvrejected.AllowUserToAddRows = False
-        Me.dgvrejected.AllowUserToDeleteRows = False
-        Me.dgvrejected.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.dgvrejected.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.dgvpendings.AllowUserToAddRows = False
+        Me.dgvpendings.AllowUserToDeleteRows = False
+        Me.dgvpendings.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgvpendings.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
         DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle7.BackColor = System.Drawing.Color.BlanchedAlmond
         DataGridViewCellStyle7.Font = New System.Drawing.Font("Javanese Text", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -697,9 +697,9 @@ Partial Class Form1
         DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.ControlLightLight
         DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.ControlText
         DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvrejected.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
-        Me.dgvrejected.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvrejected.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.course_id, Me.sd, Me.course_name, Me.reservation_date, Me.status})
+        Me.dgvpendings.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
+        Me.dgvpendings.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvpendings.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.course_id, Me.sd, Me.course_name, Me.reservation_date, Me.status})
         DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window
         DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -707,13 +707,13 @@ Partial Class Form1
         DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Moccasin
         DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.ControlText
         DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvrejected.DefaultCellStyle = DataGridViewCellStyle8
-        Me.dgvrejected.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.dgvrejected.EnableHeadersVisualStyles = False
-        Me.dgvrejected.Location = New System.Drawing.Point(0, 0)
-        Me.dgvrejected.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.dgvrejected.Name = "dgvrejected"
-        Me.dgvrejected.ReadOnly = True
+        Me.dgvpendings.DefaultCellStyle = DataGridViewCellStyle8
+        Me.dgvpendings.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dgvpendings.EnableHeadersVisualStyles = False
+        Me.dgvpendings.Location = New System.Drawing.Point(0, 0)
+        Me.dgvpendings.Margin = New System.Windows.Forms.Padding(4)
+        Me.dgvpendings.Name = "dgvpendings"
+        Me.dgvpendings.ReadOnly = True
         DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control
         DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -721,10 +721,10 @@ Partial Class Form1
         DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.PeachPuff
         DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.Desktop
         DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvrejected.RowHeadersDefaultCellStyle = DataGridViewCellStyle9
-        Me.dgvrejected.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvrejected.Size = New System.Drawing.Size(535, 268)
-        Me.dgvrejected.TabIndex = 1
+        Me.dgvpendings.RowHeadersDefaultCellStyle = DataGridViewCellStyle9
+        Me.dgvpendings.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvpendings.Size = New System.Drawing.Size(535, 268)
+        Me.dgvpendings.TabIndex = 1
         '
         'course_id
         '
@@ -770,7 +770,7 @@ Partial Class Form1
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.sidebar)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Home"
@@ -812,7 +812,7 @@ Partial Class Form1
         Me.Panel4.ResumeLayout(False)
         CType(Me.dgvrooms, System.ComponentModel.ISupportInitialize).EndInit()
         Me.x.ResumeLayout(False)
-        CType(Me.dgvrejected, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvpendings, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -845,7 +845,7 @@ Partial Class Form1
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents PictureBox9 As System.Windows.Forms.PictureBox
     Friend WithEvents x As System.Windows.Forms.Panel
-    Friend WithEvents dgvrejected As System.Windows.Forms.DataGridView
+    Friend WithEvents dgvpendings As System.Windows.Forms.DataGridView
     Friend WithEvents Panel3 As System.Windows.Forms.Panel
     Friend WithEvents Panel4 As System.Windows.Forms.Panel
     Friend WithEvents dgvrooms As System.Windows.Forms.DataGridView
