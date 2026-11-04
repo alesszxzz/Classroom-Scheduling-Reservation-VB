@@ -166,4 +166,8 @@
             MsgBox(ex.Message)
         End Try
     End Sub
+
+    Private Sub txtroom_TextChanged(sender As Object, e As EventArgs) Handles txtroom.TextChanged
+        Call loaddata("select * from rooms where room_number like '%" & txtroom.Text.ToString & "%'", dgvrooms)
+    End Sub
 End Class

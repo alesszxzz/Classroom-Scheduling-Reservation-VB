@@ -66,7 +66,7 @@ Partial Class frmRooms
         Me.btnadd = New System.Windows.Forms.Button()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtroom = New System.Windows.Forms.TextBox()
         Me.sidebar.SuspendLayout()
         Me.pnlsections.SuspendLayout()
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -529,7 +529,7 @@ Partial Class frmRooms
         Me.Panel4.BackColor = System.Drawing.Color.Beige
         Me.Panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Panel4.Controls.Add(Me.Label9)
-        Me.Panel4.Controls.Add(Me.TextBox1)
+        Me.Panel4.Controls.Add(Me.txtroom)
         Me.Panel4.Controls.Add(Me.Panel2)
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel4.Location = New System.Drawing.Point(60, 53)
@@ -542,21 +542,21 @@ Partial Class frmRooms
         Me.Label9.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("MV Boli", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(690, 24)
+        Me.Label9.Location = New System.Drawing.Point(629, 24)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(73, 17)
+        Me.Label9.Size = New System.Drawing.Size(136, 17)
         Me.Label9.TabIndex = 6
-        Me.Label9.Text = "Search By:"
+        Me.Label9.Text = "Search By Room No:"
         '
-        'TextBox1
+        'txtroom
         '
-        Me.TextBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox1.BackColor = System.Drawing.Color.White
-        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextBox1.Location = New System.Drawing.Point(769, 22)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(188, 20)
-        Me.TextBox1.TabIndex = 5
+        Me.txtroom.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtroom.BackColor = System.Drawing.Color.White
+        Me.txtroom.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtroom.Location = New System.Drawing.Point(769, 22)
+        Me.txtroom.Name = "txtroom"
+        Me.txtroom.Size = New System.Drawing.Size(188, 20)
+        Me.txtroom.TabIndex = 5
         '
         'frmRooms
         '
@@ -640,7 +640,7 @@ Partial Class frmRooms
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Label9 As System.Windows.Forms.Label
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents txtroom As System.Windows.Forms.TextBox
     Friend WithEvents room_id As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents room_number As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents capacity As System.Windows.Forms.DataGridViewTextBoxColumn
