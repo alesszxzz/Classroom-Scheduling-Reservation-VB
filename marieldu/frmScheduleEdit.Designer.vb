@@ -23,6 +23,7 @@ Partial Class frmScheduleEdit
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.btnEdit = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.cboAcademicYear = New System.Windows.Forms.ComboBox()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -40,7 +41,6 @@ Partial Class frmScheduleEdit
         Me.cboSubject = New System.Windows.Forms.ComboBox()
         Me.cboSection = New System.Windows.Forms.ComboBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.btnEdit = New System.Windows.Forms.Button()
         Me.Panel4.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -70,6 +70,24 @@ Partial Class frmScheduleEdit
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(440, 418)
         Me.Panel4.TabIndex = 10
+        '
+        'btnEdit
+        '
+        Me.btnEdit.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnEdit.BackColor = System.Drawing.Color.PapayaWhip
+        Me.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnEdit.Font = New System.Drawing.Font("SketchFlow Print", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEdit.Image = Global.prac.My.Resources.Resources.icons8_edit_24
+        Me.btnEdit.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.btnEdit.Location = New System.Drawing.Point(161, 326)
+        Me.btnEdit.Name = "btnEdit"
+        Me.btnEdit.Size = New System.Drawing.Size(92, 38)
+        Me.btnEdit.TabIndex = 30
+        Me.btnEdit.Text = "Edit"
+        Me.btnEdit.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnEdit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnEdit.UseVisualStyleBackColor = False
         '
         'Label4
         '
@@ -231,24 +249,6 @@ Partial Class frmScheduleEdit
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(440, 53)
         Me.Panel1.TabIndex = 9
-        '
-        'btnEdit
-        '
-        Me.btnEdit.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnEdit.BackColor = System.Drawing.Color.PapayaWhip
-        Me.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnEdit.Font = New System.Drawing.Font("SketchFlow Print", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnEdit.Image = Global.prac.My.Resources.Resources.icons8_edit_24
-        Me.btnEdit.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.btnEdit.Location = New System.Drawing.Point(161, 326)
-        Me.btnEdit.Name = "btnEdit"
-        Me.btnEdit.Size = New System.Drawing.Size(92, 38)
-        Me.btnEdit.TabIndex = 30
-        Me.btnEdit.Text = "Edit"
-        Me.btnEdit.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnEdit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btnEdit.UseVisualStyleBackColor = False
         '
         'frmScheduleEdit
         '

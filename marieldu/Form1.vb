@@ -24,7 +24,7 @@
 
 
         Scheduling.PopulateFilterComboBox(cboSection, "SELECT DISTINCT section_name FROM sections ORDER BY section_name", "section_name")
-        Call loaddata("select rooms.room_number, reservations.reserved_by, reservations.purpose, reservations.reservation_date, reservations.status from reservations join rooms on reservations.room_id = rooms.room_id where status like '%Accepted%'", dgvAccepted)
+        Call loaddata("select rooms.room_number, reservations.reserved_by, reservations.purpose, reservations.reservation_date, reservations.status from reservations join rooms on reservations.room_id = rooms.room_id where status like '%Approved%'", dgvAccepted)
         Call loaddata("select rooms.room_number, reservations.reserved_by, reservations.purpose, reservations.reservation_date, reservations.status from reservations join rooms on reservations.room_id = rooms.room_id where status like '%Pending%'", dgvpendings)
     End Sub
 

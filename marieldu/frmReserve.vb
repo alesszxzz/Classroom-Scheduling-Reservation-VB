@@ -76,6 +76,8 @@
 
         MsgBox("Reservation approved successfully!", MsgBoxStyle.Information)
         LoadReservations()
+        Call loaddata("select rooms.room_number, reservations.reserved_by, reservations.purpose, reservations.reservation_date, reservations.status from reservations join rooms on reservations.room_id = rooms.room_id where status like '%Approved%'", Form1.dgvAccepted)
+        Call loaddata("select rooms.room_number, reservations.reserved_by, reservations.purpose, reservations.reservation_date, reservations.status from reservations join rooms on reservations.room_id = rooms.room_id where status like '%Pending%'", Form1.dgvpendings)
     End Sub
 
     ' Reject Button Click
@@ -94,6 +96,8 @@
 
         MsgBox("Reservation rejected.", MsgBoxStyle.Information)
         LoadReservations()
+        Call loaddata("select rooms.room_number, reservations.reserved_by, reservations.purpose, reservations.reservation_date, reservations.status from reservations join rooms on reservations.room_id = rooms.room_id where status like '%Approved%'", Form1.dgvAccepted)
+        Call loaddata("select rooms.room_number, reservations.reserved_by, reservations.purpose, reservations.reservation_date, reservations.status from reservations join rooms on reservations.room_id = rooms.room_id where status like '%Pending%'", Form1.dgvpendings)
     End Sub
 
     Private Sub btnLogOut_Click(sender As Object, e As EventArgs) Handles btnLogOut.Click
@@ -110,4 +114,5 @@
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         frmSchedulesUsers.Show()
     End Sub
+
 End Class

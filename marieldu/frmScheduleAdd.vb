@@ -94,11 +94,21 @@
             If con.State = ConnectionState.Closed Then con.Open()
             cmd.ExecuteNonQuery()
             con.Close()
+            cboAcademicYear.SelectedIndex = -1
+            cboSection.SelectedIndex = -1
+            cboSubject.SelectedIndex = -1
+            cboTeacher.SelectedIndex = -1
+            cboRoom.SelectedIndex = -1
+            cboDay.SelectedIndex = -1
+            cboStartTime.SelectedIndex = -1
+            cboEndTime.SelectedIndex = -1
         End Using
 
         MsgBox("Schedule successfully saved with no conflicts!", MsgBoxStyle.Information)
         Scheduling.LoadScheduleData()
         Me.Hide()
+        Call loaddata("select rooms.room_number, reservations.reserved_by, reservations.purpose, reservations.reservation_date, reservations.status from reservations join rooms on reservations.room_id = rooms.room_id where status like '%Approved%'", Form1.dgvAccepted)
+        Call loaddata("select rooms.room_number, reservations.reserved_by, reservations.purpose, reservations.reservation_date, reservations.status from reservations join rooms on reservations.room_id = rooms.room_id where status like '%Pending%'", Form1.dgvpendings)
     End Sub
 
     Private Sub cboSection_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboSection.SelectedIndexChanged

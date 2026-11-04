@@ -104,6 +104,28 @@
         MsgBox("Reservation request submitted! Waiting for admin approval.", MsgBoxStyle.Information)
         frmReserve.LoadReservations()
         Me.Hide()
+
+        Call loaddata("select rooms.room_number, reservations.reserved_by, reservations.purpose, reservations.reservation_date, reservations.status from reservations join rooms on reservations.room_id = rooms.room_id where status like '%Approved%'", Form1.dgvAccepted)
+        Call loaddata("select rooms.room_number, reservations.reserved_by, reservations.purpose, reservations.reservation_date, reservations.status from reservations join rooms on reservations.room_id = rooms.room_id where status like '%Pending%'", Form1.dgvpendings)
+
+        Call connection()
+        Dim query1 As String = "SELECT rooms.room_number FROM reservations JOIN rooms ON reservations.room_id = rooms.room_id group by rooms.room_number order by count(reservations.room_id) desc limit 1"
+
+        Using cmd As New Odbc.OdbcCommand(query1, con)
+            Try
+                Dim result = cmd.ExecuteScalar()
+
+                If result IsNot DBNull.Value AndAlso result IsNot Nothing Then
+                    Form1.lblmostbook.Text = result.ToString()
+                Else
+                    Form1.lblmostbook.Text = "No Bookings"
+                End If
+            Catch ex As Odbc.OdbcException
+                MessageBox.Show("ODBC Database Error: " & ex.Message)
+            Catch ex As Exception
+                MessageBox.Show("Error: " & ex.Message)
+            End Try
+        End Using
     End Sub
 
     ' Helper to populate combo box with ID

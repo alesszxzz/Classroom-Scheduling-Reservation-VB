@@ -95,4 +95,61 @@
     Private Sub cboSection_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboSection.SelectedIndexChanged
         If isLoading Then Exit Sub
     End Sub
+
+    Private Sub btnEdit_Click(sender As Object, e As EventArgs) Handles btnEdit.Click
+        Dim startTime24 As String = DateTime.Parse(cboStartTime.SelectedItem.ToString()).ToString("HH:mm:ss")
+        Dim endTime24 As String = DateTime.Parse(cboEndTime.SelectedItem.ToString()).ToString("HH:mm:ss")
+
+        If TimeSpan.Parse(startTime24) >= TimeSpan.Parse(endTime24) Then
+            MsgBox("End time must be later than start time!", MsgBoxStyle.Exclamation)
+            Exit Sub
+        End If
+
+        Dim sectionId As Integer = Val(CType(cboSection.SelectedItem, frminstructorEdit.ComboboxItem).Value)
+        Dim subjectId As Integer = Val(CType(cboSubject.SelectedItem, frminstructorEdit.ComboboxItem).Value)
+        Dim teacherId As Integer = Val(CType(cboTeacher.SelectedItem, frminstructorEdit.ComboboxItem).Value)
+        Dim roomId As Integer = Val(CType(cboRoom.SelectedItem, frminstructorEdit.ComboboxItem).Value)
+        Dim dayOfWeek As String = cboDay.SelectedItem.ToString()
+        Dim academicYear As String = cboAcademicYear.SelectedItem.ToString()
+
+        ' --- RUN CONFLICT CHECK ---
+        Dim conflictMessage As String = CheckScheduleConflicts(roomId, teacherId, sectionId, dayOfWeek, startTime24, endTime24, academicYear)
+
+        If conflictMessage <> "" Then
+            MsgBox(conflictMessage, MsgBoxStyle.Critical, "Scheduling Conflict Error")
+            Exit Sub ' Stop saving process
+        End If
+
+        ' Proceed with INSERT query if conflictMessage is empty...
+        Dim query As String = "update schedules set section_id=?, subject_id=?, teacher_id=?, room_id=?, day_of_week=?, start_time=?, end_time=?, academic_year=? where reservation_id =" & Val(Scheduling.dgvrooms.Tag)
+
+        Using cmd As New Odbc.OdbcCommand(query, con)
+            cmd.Parameters.AddWithValue("?", sectionId)
+            cmd.Parameters.AddWithValue("?", subjectId)
+            cmd.Parameters.AddWithValue("?", teacherId)
+            cmd.Parameters.AddWithValue("?", roomId)
+            cmd.Parameters.AddWithValue("?", dayOfWeek)
+            cmd.Parameters.AddWithValue("?", startTime24)
+            cmd.Parameters.AddWithValue("?", endTime24)
+            cmd.Parameters.AddWithValue("?", academicYear)
+
+            If con.State = ConnectionState.Closed Then con.Open()
+            cmd.ExecuteNonQuery()
+            con.Close()
+            cboAcademicYear.SelectedIndex = -1
+            cboSection.SelectedIndex = -1
+            cboSubject.SelectedIndex = -1
+            cboTeacher.SelectedIndex = -1
+            cboRoom.SelectedIndex = -1
+            cboDay.SelectedIndex = -1
+            cboStartTime.SelectedIndex = -1
+            cboEndTime.SelectedIndex = -1
+        End Using
+
+        MsgBox("Schedule successfully saved with no conflicts!", MsgBoxStyle.Information)
+        Scheduling.LoadScheduleData()
+        Me.Hide()
+        Call loaddata("select rooms.room_number, reservations.reserved_by, reservations.purpose, reservations.reservation_date, reservations.status from reservations join rooms on reservations.room_id = rooms.room_id where status like '%Approved%'", Form1.dgvAccepted)
+        Call loaddata("select rooms.room_number, reservations.reserved_by, reservations.purpose, reservations.reservation_date, reservations.status from reservations join rooms on reservations.room_id = rooms.room_id where status like '%Pending%'", Form1.dgvpendings)
+    End Sub
 End Class
