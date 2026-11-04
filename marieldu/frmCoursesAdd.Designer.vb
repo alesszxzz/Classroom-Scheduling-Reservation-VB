@@ -23,12 +23,12 @@ Partial Class frmCoursesAdd
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.btnadd = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtname = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtcode = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.btnadd = New System.Windows.Forms.Button()
         Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -41,59 +41,10 @@ Partial Class frmCoursesAdd
         Me.Panel2.Controls.Add(Me.Label1)
         Me.Panel2.Controls.Add(Me.txtcode)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel2.Location = New System.Drawing.Point(0, 79)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(4)
+        Me.Panel2.Location = New System.Drawing.Point(0, 64)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(532, 426)
+        Me.Panel2.Size = New System.Drawing.Size(399, 346)
         Me.Panel2.TabIndex = 3
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Malgun Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(98, 191)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(105, 20)
-        Me.Label2.TabIndex = 3
-        Me.Label2.Text = "Course Name"
-        '
-        'txtname
-        '
-        Me.txtname.Location = New System.Drawing.Point(102, 213)
-        Me.txtname.Margin = New System.Windows.Forms.Padding(4)
-        Me.txtname.Name = "txtname"
-        Me.txtname.Size = New System.Drawing.Size(287, 22)
-        Me.txtname.TabIndex = 2
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Malgun Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(98, 119)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(99, 20)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Course Code"
-        '
-        'txtcode
-        '
-        Me.txtcode.Location = New System.Drawing.Point(102, 141)
-        Me.txtcode.Margin = New System.Windows.Forms.Padding(4)
-        Me.txtcode.Name = "txtcode"
-        Me.txtcode.Size = New System.Drawing.Size(287, 22)
-        Me.txtcode.TabIndex = 0
-        '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.Color.Tan
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(532, 79)
-        Me.Panel1.TabIndex = 2
         '
         'btnadd
         '
@@ -103,23 +54,66 @@ Partial Class frmCoursesAdd
         Me.btnadd.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnadd.Font = New System.Drawing.Font("SketchFlow Print", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnadd.Image = Global.prac.My.Resources.Resources.icons8_add_24
-        Me.btnadd.Location = New System.Drawing.Point(184, 319)
-        Me.btnadd.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnadd.Location = New System.Drawing.Point(138, 259)
         Me.btnadd.Name = "btnadd"
-        Me.btnadd.Size = New System.Drawing.Size(123, 47)
+        Me.btnadd.Size = New System.Drawing.Size(92, 38)
         Me.btnadd.TabIndex = 6
         Me.btnadd.Text = "Add"
         Me.btnadd.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnadd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnadd.UseVisualStyleBackColor = False
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Malgun Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(74, 155)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(86, 15)
+        Me.Label2.TabIndex = 3
+        Me.Label2.Text = "Course Name"
+        '
+        'txtname
+        '
+        Me.txtname.Location = New System.Drawing.Point(76, 173)
+        Me.txtname.Name = "txtname"
+        Me.txtname.Size = New System.Drawing.Size(216, 20)
+        Me.txtname.TabIndex = 2
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Malgun Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(74, 97)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(81, 15)
+        Me.Label1.TabIndex = 1
+        Me.Label1.Text = "Course Code"
+        '
+        'txtcode
+        '
+        Me.txtcode.Location = New System.Drawing.Point(76, 115)
+        Me.txtcode.Name = "txtcode"
+        Me.txtcode.Size = New System.Drawing.Size(216, 20)
+        Me.txtcode.TabIndex = 0
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.Tan
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(399, 64)
+        Me.Panel1.TabIndex = 2
+        '
         'frmCoursesAdd
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(532, 505)
+        Me.ClientSize = New System.Drawing.Size(399, 410)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "frmCoursesAdd"
         Me.Text = "frmCoursesAdd"
         Me.Panel2.ResumeLayout(False)
