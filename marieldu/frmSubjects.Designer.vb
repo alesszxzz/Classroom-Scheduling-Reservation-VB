@@ -115,29 +115,26 @@ Partial Class frmSubjects
         Me.sidebar.Controls.Add(Me.phome)
         Me.sidebar.Dock = System.Windows.Forms.DockStyle.Left
         Me.sidebar.Location = New System.Drawing.Point(0, 0)
-        Me.sidebar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.sidebar.Name = "sidebar"
-        Me.sidebar.Size = New System.Drawing.Size(80, 838)
+        Me.sidebar.Size = New System.Drawing.Size(60, 681)
         Me.sidebar.TabIndex = 3
         '
         'pnlsections
         '
         Me.pnlsections.Controls.Add(Me.Label10)
         Me.pnlsections.Controls.Add(Me.PictureBox9)
-        Me.pnlsections.Location = New System.Drawing.Point(1, 507)
-        Me.pnlsections.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.pnlsections.Location = New System.Drawing.Point(1, 412)
         Me.pnlsections.Name = "pnlsections"
-        Me.pnlsections.Size = New System.Drawing.Size(231, 74)
+        Me.pnlsections.Size = New System.Drawing.Size(173, 60)
         Me.pnlsections.TabIndex = 10
         '
         'Label10
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(96, 27)
-        Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label10.Location = New System.Drawing.Point(72, 22)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(90, 20)
+        Me.Label10.Size = New System.Drawing.Size(70, 16)
         Me.Label10.TabIndex = 1
         Me.Label10.Text = "Sections"
         '
@@ -145,10 +142,9 @@ Partial Class frmSubjects
         '
         Me.PictureBox9.BackgroundImage = Global.prac.My.Resources.Resources.icons8_class_24
         Me.PictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox9.Location = New System.Drawing.Point(17, 18)
-        Me.PictureBox9.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox9.Location = New System.Drawing.Point(13, 15)
         Me.PictureBox9.Name = "PictureBox9"
-        Me.PictureBox9.Size = New System.Drawing.Size(40, 37)
+        Me.PictureBox9.Size = New System.Drawing.Size(30, 30)
         Me.PictureBox9.TabIndex = 1
         Me.PictureBox9.TabStop = False
         '
@@ -156,20 +152,18 @@ Partial Class frmSubjects
         '
         Me.pinstructors.Controls.Add(Me.Label7)
         Me.pinstructors.Controls.Add(Me.PictureBox8)
-        Me.pinstructors.Location = New System.Drawing.Point(1, 286)
-        Me.pinstructors.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.pinstructors.Location = New System.Drawing.Point(1, 232)
         Me.pinstructors.Name = "pinstructors"
-        Me.pinstructors.Size = New System.Drawing.Size(231, 74)
+        Me.pinstructors.Size = New System.Drawing.Size(173, 60)
         Me.pinstructors.TabIndex = 8
         '
         'Label7
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(96, 27)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label7.Location = New System.Drawing.Point(72, 22)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(116, 20)
+        Me.Label7.Size = New System.Drawing.Size(89, 16)
         Me.Label7.TabIndex = 1
         Me.Label7.Text = "Instructors"
         '
@@ -177,10 +171,9 @@ Partial Class frmSubjects
         '
         Me.PictureBox8.BackgroundImage = Global.prac.My.Resources.Resources.icons8_training_24
         Me.PictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox8.Location = New System.Drawing.Point(17, 18)
-        Me.PictureBox8.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox8.Location = New System.Drawing.Point(13, 15)
         Me.PictureBox8.Name = "PictureBox8"
-        Me.PictureBox8.Size = New System.Drawing.Size(40, 37)
+        Me.PictureBox8.Size = New System.Drawing.Size(30, 30)
         Me.PictureBox8.TabIndex = 1
         Me.PictureBox8.TabStop = False
         '
@@ -188,10 +181,9 @@ Partial Class frmSubjects
         '
         Me.PictureBox7.BackgroundImage = Global.prac.My.Resources.Resources.icons8_striped_patterns_24
         Me.PictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox7.Location = New System.Drawing.Point(21, 15)
-        Me.PictureBox7.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox7.Location = New System.Drawing.Point(16, 12)
         Me.PictureBox7.Name = "PictureBox7"
-        Me.PictureBox7.Size = New System.Drawing.Size(40, 37)
+        Me.PictureBox7.Size = New System.Drawing.Size(30, 30)
         Me.PictureBox7.TabIndex = 7
         Me.PictureBox7.TabStop = False
         '
@@ -200,20 +192,18 @@ Partial Class frmSubjects
         Me.proom.BackColor = System.Drawing.Color.Transparent
         Me.proom.Controls.Add(Me.Label3)
         Me.proom.Controls.Add(Me.PictureBox3)
-        Me.proom.Location = New System.Drawing.Point(1, 212)
-        Me.proom.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.proom.Location = New System.Drawing.Point(1, 172)
         Me.proom.Name = "proom"
-        Me.proom.Size = New System.Drawing.Size(231, 74)
+        Me.proom.Size = New System.Drawing.Size(173, 60)
         Me.proom.TabIndex = 3
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(96, 27)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Location = New System.Drawing.Point(72, 22)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(74, 20)
+        Me.Label3.Size = New System.Drawing.Size(57, 16)
         Me.Label3.TabIndex = 1
         Me.Label3.Text = "Rooms"
         '
@@ -221,10 +211,9 @@ Partial Class frmSubjects
         '
         Me.PictureBox3.BackgroundImage = Global.prac.My.Resources.Resources.icons8_room_24
         Me.PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox3.Location = New System.Drawing.Point(17, 18)
-        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox3.Location = New System.Drawing.Point(13, 15)
         Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(40, 37)
+        Me.PictureBox3.Size = New System.Drawing.Size(30, 30)
         Me.PictureBox3.TabIndex = 1
         Me.PictureBox3.TabStop = False
         '
@@ -233,20 +222,18 @@ Partial Class frmSubjects
         Me.plogout.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.plogout.Controls.Add(Me.Label6)
         Me.plogout.Controls.Add(Me.PictureBox6)
-        Me.plogout.Location = New System.Drawing.Point(0, 758)
-        Me.plogout.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.plogout.Location = New System.Drawing.Point(0, 616)
         Me.plogout.Name = "plogout"
-        Me.plogout.Size = New System.Drawing.Size(231, 74)
+        Me.plogout.Size = New System.Drawing.Size(173, 60)
         Me.plogout.TabIndex = 6
         '
         'Label6
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(96, 27)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label6.Location = New System.Drawing.Point(72, 22)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(84, 20)
+        Me.Label6.Size = New System.Drawing.Size(64, 16)
         Me.Label6.TabIndex = 1
         Me.Label6.Text = "Log Out"
         '
@@ -254,10 +241,9 @@ Partial Class frmSubjects
         '
         Me.PictureBox6.BackgroundImage = CType(resources.GetObject("PictureBox6.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox6.Location = New System.Drawing.Point(17, 18)
-        Me.PictureBox6.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox6.Location = New System.Drawing.Point(13, 15)
         Me.PictureBox6.Name = "PictureBox6"
-        Me.PictureBox6.Size = New System.Drawing.Size(40, 37)
+        Me.PictureBox6.Size = New System.Drawing.Size(30, 30)
         Me.PictureBox6.TabIndex = 1
         Me.PictureBox6.TabStop = False
         '
@@ -265,20 +251,18 @@ Partial Class frmSubjects
         '
         Me.pcourses.Controls.Add(Me.Label5)
         Me.pcourses.Controls.Add(Me.PictureBox5)
-        Me.pcourses.Location = New System.Drawing.Point(1, 433)
-        Me.pcourses.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.pcourses.Location = New System.Drawing.Point(1, 352)
         Me.pcourses.Name = "pcourses"
-        Me.pcourses.Size = New System.Drawing.Size(231, 74)
+        Me.pcourses.Size = New System.Drawing.Size(173, 60)
         Me.pcourses.TabIndex = 5
         '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(96, 27)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label5.Location = New System.Drawing.Point(72, 22)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(84, 20)
+        Me.Label5.Size = New System.Drawing.Size(67, 16)
         Me.Label5.TabIndex = 1
         Me.Label5.Text = "Courses"
         '
@@ -286,10 +270,9 @@ Partial Class frmSubjects
         '
         Me.PictureBox5.BackgroundImage = Global.prac.My.Resources.Resources.icons8_course_24
         Me.PictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox5.Location = New System.Drawing.Point(17, 18)
-        Me.PictureBox5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox5.Location = New System.Drawing.Point(13, 15)
         Me.PictureBox5.Name = "PictureBox5"
-        Me.PictureBox5.Size = New System.Drawing.Size(40, 37)
+        Me.PictureBox5.Size = New System.Drawing.Size(30, 30)
         Me.PictureBox5.TabIndex = 1
         Me.PictureBox5.TabStop = False
         '
@@ -298,20 +281,18 @@ Partial Class frmSubjects
         Me.psubs.BackColor = System.Drawing.Color.Beige
         Me.psubs.Controls.Add(Me.Label4)
         Me.psubs.Controls.Add(Me.PictureBox4)
-        Me.psubs.Location = New System.Drawing.Point(1, 359)
-        Me.psubs.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.psubs.Location = New System.Drawing.Point(1, 292)
         Me.psubs.Name = "psubs"
-        Me.psubs.Size = New System.Drawing.Size(231, 74)
+        Me.psubs.Size = New System.Drawing.Size(173, 60)
         Me.psubs.TabIndex = 4
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(96, 27)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Location = New System.Drawing.Point(72, 22)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(91, 20)
+        Me.Label4.Size = New System.Drawing.Size(71, 16)
         Me.Label4.TabIndex = 1
         Me.Label4.Text = "Subjects"
         '
@@ -319,10 +300,9 @@ Partial Class frmSubjects
         '
         Me.PictureBox4.BackgroundImage = Global.prac.My.Resources.Resources.icons8_book_24
         Me.PictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox4.Location = New System.Drawing.Point(17, 18)
-        Me.PictureBox4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox4.Location = New System.Drawing.Point(13, 15)
         Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(40, 37)
+        Me.PictureBox4.Size = New System.Drawing.Size(30, 30)
         Me.PictureBox4.TabIndex = 1
         Me.PictureBox4.TabStop = False
         '
@@ -331,31 +311,28 @@ Partial Class frmSubjects
         Me.preservation.BackColor = System.Drawing.Color.Transparent
         Me.preservation.Controls.Add(Me.Label2)
         Me.preservation.Controls.Add(Me.PictureBox2)
-        Me.preservation.Location = New System.Drawing.Point(1, 138)
-        Me.preservation.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.preservation.Location = New System.Drawing.Point(1, 112)
         Me.preservation.Name = "preservation"
-        Me.preservation.Size = New System.Drawing.Size(231, 74)
+        Me.preservation.Size = New System.Drawing.Size(173, 60)
         Me.preservation.TabIndex = 2
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(96, 27)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(72, 22)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(122, 20)
+        Me.Label2.Size = New System.Drawing.Size(87, 16)
         Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Reservation"
+        Me.Label2.Text = "Scheduling"
         '
         'PictureBox2
         '
         Me.PictureBox2.BackgroundImage = Global.prac.My.Resources.Resources.icons8_reservation_24
         Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox2.Location = New System.Drawing.Point(17, 18)
-        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox2.Location = New System.Drawing.Point(13, 15)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(40, 37)
+        Me.PictureBox2.Size = New System.Drawing.Size(30, 30)
         Me.PictureBox2.TabIndex = 1
         Me.PictureBox2.TabStop = False
         '
@@ -364,20 +341,18 @@ Partial Class frmSubjects
         Me.phome.BackColor = System.Drawing.Color.Transparent
         Me.phome.Controls.Add(Me.Label1)
         Me.phome.Controls.Add(Me.PictureBox1)
-        Me.phome.Location = New System.Drawing.Point(1, 65)
-        Me.phome.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.phome.Location = New System.Drawing.Point(1, 53)
         Me.phome.Name = "phome"
-        Me.phome.Size = New System.Drawing.Size(231, 74)
+        Me.phome.Size = New System.Drawing.Size(173, 60)
         Me.phome.TabIndex = 1
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(96, 27)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(72, 22)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(64, 20)
+        Me.Label1.Size = New System.Drawing.Size(51, 16)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Home"
         '
@@ -385,10 +360,9 @@ Partial Class frmSubjects
         '
         Me.PictureBox1.BackgroundImage = Global.prac.My.Resources.Resources.icons8_home_24
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox1.Location = New System.Drawing.Point(17, 18)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox1.Location = New System.Drawing.Point(13, 15)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(40, 37)
+        Me.PictureBox1.Size = New System.Drawing.Size(30, 30)
         Me.PictureBox1.TabIndex = 1
         Me.PictureBox1.TabStop = False
         '
@@ -397,10 +371,9 @@ Partial Class frmSubjects
         Me.Panel1.BackColor = System.Drawing.Color.Peru
         Me.Panel1.Controls.Add(Me.Label8)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel1.Location = New System.Drawing.Point(80, 0)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel1.Location = New System.Drawing.Point(60, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1339, 65)
+        Me.Panel1.Size = New System.Drawing.Size(1004, 53)
         Me.Panel1.TabIndex = 4
         '
         'Label8
@@ -409,9 +382,8 @@ Partial Class frmSubjects
         Me.Label8.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label8.Font = New System.Drawing.Font("MV Boli", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.Location = New System.Drawing.Point(0, 0)
-        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(1339, 65)
+        Me.Label8.Size = New System.Drawing.Size(1004, 53)
         Me.Label8.TabIndex = 0
         Me.Label8.Text = "CSTA Lab Scheduling && Reservation"
         Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -423,10 +395,9 @@ Partial Class frmSubjects
         Me.Panel3.Controls.Add(Me.Button1)
         Me.Panel3.Controls.Add(Me.btnadd)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel3.Location = New System.Drawing.Point(80, 752)
-        Me.Panel3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel3.Location = New System.Drawing.Point(60, 611)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(1339, 86)
+        Me.Panel3.Size = New System.Drawing.Size(1004, 70)
         Me.Panel3.TabIndex = 6
         '
         'Button2
@@ -437,10 +408,9 @@ Partial Class frmSubjects
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button2.Font = New System.Drawing.Font("SketchFlow Print", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.Image = Global.prac.My.Resources.Resources.icons8_delete_24
-        Me.Button2.Location = New System.Drawing.Point(1155, 25)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button2.Location = New System.Drawing.Point(866, 20)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(123, 47)
+        Me.Button2.Size = New System.Drawing.Size(92, 38)
         Me.Button2.TabIndex = 2
         Me.Button2.Text = "Delete"
         Me.Button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -456,10 +426,9 @@ Partial Class frmSubjects
         Me.Button1.Font = New System.Drawing.Font("SketchFlow Print", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.Image = Global.prac.My.Resources.Resources.icons8_edit_24
         Me.Button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.Button1.Location = New System.Drawing.Point(1001, 25)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button1.Location = New System.Drawing.Point(751, 20)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(123, 47)
+        Me.Button1.Size = New System.Drawing.Size(92, 38)
         Me.Button1.TabIndex = 1
         Me.Button1.Text = "Edit"
         Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -474,10 +443,9 @@ Partial Class frmSubjects
         Me.btnadd.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnadd.Font = New System.Drawing.Font("SketchFlow Print", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnadd.Image = Global.prac.My.Resources.Resources.icons8_add_24
-        Me.btnadd.Location = New System.Drawing.Point(851, 25)
-        Me.btnadd.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnadd.Location = New System.Drawing.Point(638, 20)
         Me.btnadd.Name = "btnadd"
-        Me.btnadd.Size = New System.Drawing.Size(123, 47)
+        Me.btnadd.Size = New System.Drawing.Size(92, 38)
         Me.btnadd.TabIndex = 0
         Me.btnadd.Text = "Add"
         Me.btnadd.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -497,10 +465,9 @@ Partial Class frmSubjects
         Me.Panel4.Controls.Add(Me.Label9)
         Me.Panel4.Controls.Add(Me.Panel2)
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel4.Location = New System.Drawing.Point(80, 65)
-        Me.Panel4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel4.Location = New System.Drawing.Point(60, 53)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(1339, 687)
+        Me.Panel4.Size = New System.Drawing.Size(1004, 558)
         Me.Panel4.TabIndex = 7
         '
         'Button3
@@ -511,10 +478,9 @@ Partial Class frmSubjects
         Me.Button3.Font = New System.Drawing.Font("SketchFlow Print", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button3.Image = Global.prac.My.Resources.Resources.icons8_search_15
         Me.Button3.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.Button3.Location = New System.Drawing.Point(1155, 26)
-        Me.Button3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button3.Location = New System.Drawing.Point(866, 21)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(119, 28)
+        Me.Button3.Size = New System.Drawing.Size(89, 23)
         Me.Button3.TabIndex = 12
         Me.Button3.Text = "Search"
         Me.Button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -526,10 +492,9 @@ Partial Class frmSubjects
         Me.cboyearl.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.cboyearl.FormattingEnabled = True
         Me.cboyearl.Items.AddRange(New Object() {"1", "2", "3", "4"})
-        Me.cboyearl.Location = New System.Drawing.Point(408, 26)
-        Me.cboyearl.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cboyearl.Location = New System.Drawing.Point(306, 21)
         Me.cboyearl.Name = "cboyearl"
-        Me.cboyearl.Size = New System.Drawing.Size(160, 24)
+        Me.cboyearl.Size = New System.Drawing.Size(121, 21)
         Me.cboyearl.TabIndex = 11
         '
         'Label12
@@ -537,10 +502,9 @@ Partial Class frmSubjects
         Me.Label12.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("MV Boli", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(307, 28)
-        Me.Label12.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label12.Location = New System.Drawing.Point(230, 23)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(97, 22)
+        Me.Label12.Size = New System.Drawing.Size(75, 17)
         Me.Label12.TabIndex = 10
         Me.Label12.Text = "Year Level:"
         '
@@ -549,10 +513,9 @@ Partial Class frmSubjects
         Me.cbosem.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.cbosem.FormattingEnabled = True
         Me.cbosem.Items.AddRange(New Object() {"1", "2"})
-        Me.cbosem.Location = New System.Drawing.Point(699, 26)
-        Me.cbosem.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cbosem.Location = New System.Drawing.Point(524, 21)
         Me.cbosem.Name = "cbosem"
-        Me.cbosem.Size = New System.Drawing.Size(160, 24)
+        Me.cbosem.Size = New System.Drawing.Size(121, 21)
         Me.cbosem.TabIndex = 9
         '
         'Label11
@@ -560,10 +523,9 @@ Partial Class frmSubjects
         Me.Label11.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("MV Boli", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(600, 28)
-        Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label11.Location = New System.Drawing.Point(450, 23)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(88, 22)
+        Me.Label11.Size = New System.Drawing.Size(68, 17)
         Me.Label11.TabIndex = 8
         Me.Label11.Text = "Semester:"
         '
@@ -571,10 +533,9 @@ Partial Class frmSubjects
         '
         Me.cbocourse.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.cbocourse.FormattingEnabled = True
-        Me.cbocourse.Location = New System.Drawing.Point(963, 28)
-        Me.cbocourse.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cbocourse.Location = New System.Drawing.Point(722, 23)
         Me.cbocourse.Name = "cbocourse"
-        Me.cbocourse.Size = New System.Drawing.Size(160, 24)
+        Me.cbocourse.Size = New System.Drawing.Size(121, 21)
         Me.cbocourse.TabIndex = 7
         '
         'Label9
@@ -582,10 +543,9 @@ Partial Class frmSubjects
         Me.Label9.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("MV Boli", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(879, 28)
-        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label9.Location = New System.Drawing.Point(659, 23)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(73, 22)
+        Me.Label9.Size = New System.Drawing.Size(57, 17)
         Me.Label9.TabIndex = 6
         Me.Label9.Text = "Courses:"
         '
@@ -597,10 +557,9 @@ Partial Class frmSubjects
         Me.Panel2.BackColor = System.Drawing.Color.Cornsilk
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel2.Controls.Add(Me.dgvrooms)
-        Me.Panel2.Location = New System.Drawing.Point(68, 58)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel2.Location = New System.Drawing.Point(51, 47)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1209, 574)
+        Me.Panel2.Size = New System.Drawing.Size(907, 467)
         Me.Panel2.TabIndex = 4
         '
         'dgvrooms
@@ -630,7 +589,6 @@ Partial Class frmSubjects
         Me.dgvrooms.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvrooms.EnableHeadersVisualStyles = False
         Me.dgvrooms.Location = New System.Drawing.Point(0, 0)
-        Me.dgvrooms.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.dgvrooms.Name = "dgvrooms"
         Me.dgvrooms.ReadOnly = True
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
@@ -642,7 +600,7 @@ Partial Class frmSubjects
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgvrooms.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.dgvrooms.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvrooms.Size = New System.Drawing.Size(1207, 572)
+        Me.dgvrooms.Size = New System.Drawing.Size(905, 465)
         Me.dgvrooms.TabIndex = 0
         '
         'subject_id
@@ -704,14 +662,13 @@ Partial Class frmSubjects
         '
         'frmSubjects
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1419, 838)
+        Me.ClientSize = New System.Drawing.Size(1064, 681)
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.sidebar)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "frmSubjects"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmSubjects"

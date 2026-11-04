@@ -311,9 +311,9 @@ Partial Class frmCourses
         Me.Label2.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(72, 22)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(95, 16)
+        Me.Label2.Size = New System.Drawing.Size(87, 16)
         Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Reservation"
+        Me.Label2.Text = "Scheduling"
         '
         'PictureBox2
         '
@@ -538,7 +538,7 @@ Partial Class frmCourses
         Me.Controls.Add(Me.sidebar)
         Me.Name = "frmCourses"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "frmCourses"
+        Me.Text = "Courses"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.sidebar.ResumeLayout(False)
         Me.pnlsections.ResumeLayout(False)

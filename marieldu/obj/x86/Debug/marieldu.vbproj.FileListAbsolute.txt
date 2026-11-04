@@ -32,7 +32,6 @@ C:\Users\PC\Documents\marieldu\marieldu\obj\x86\Debug\prac.frmRoomsAdd.resources
 C:\Users\PC\Documents\marieldu\marieldu\obj\x86\Debug\prac.frmRoomsEdit.resources
 C:\Users\PC\Documents\marieldu\marieldu\obj\x86\Debug\prac.frmSubjects.resources
 C:\Users\PC\Documents\marieldu\marieldu\obj\x86\Debug\prac.Resources.resources
-C:\Users\PC\Documents\marieldu\marieldu\obj\x86\Debug\prac.frmReservation.resources
 C:\Users\PC\Documents\marieldu\marieldu\obj\x86\Debug\marieldu.vbproj.GenerateResource.Cache
 C:\Users\PC\Documents\marieldu\marieldu\obj\x86\Debug\prac.frmSubjectsAdd.resources
 C:\Users\PC\Documents\marieldu\marieldu\obj\x86\Debug\prac.frmSubjectsEdit.resources
@@ -49,3 +48,5 @@ C:\Users\PC\Documents\marieldu\marieldu\obj\x86\Debug\prac.frmInsAddChoice.resou
 C:\Users\PC\Documents\marieldu\marieldu\obj\x86\Debug\prac.frmScheduleAdd.resources
 C:\Users\PC\Documents\marieldu\marieldu\obj\x86\Debug\prac.frmScheduleEdit.resources
 C:\Users\PC\Documents\marieldu\marieldu\obj\x86\Debug\prac.frmReserveAdd.resources
+C:\Users\PC\Documents\marieldu\marieldu\obj\x86\Debug\prac.frmSchedulesUsers.resources
+C:\Users\PC\Documents\marieldu\marieldu\obj\x86\Debug\prac.Scheduling.resources

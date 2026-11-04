@@ -87,7 +87,7 @@
     End Sub
 
     Private Sub preservation_MouseClick(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles preservation.MouseClick
-        frmReservation.Show()
+        Scheduling.Show()
         Me.Hide()
     End Sub
 

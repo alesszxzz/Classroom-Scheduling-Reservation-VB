@@ -2,7 +2,7 @@
 
     Private Sub frmSection_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Call connection()
-        'Call loaddata("select * from sections", dgvrooms)
+        'Call loaddata("select * from sections", dgvrooms
         Call loaddata("select sections.section_id, sections.section_name, sections.year_level, sections.course_id, courses.course_code from sections join courses on sections.course_id = courses.course_id", dgvrooms)
     End Sub
     'Form Design
@@ -83,7 +83,7 @@
     End Sub
 
     Private Sub preservation_MouseClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles preservation.MouseClick
-        frmReservation.Show()
+        Scheduling.Show()
         Me.Hide()
     End Sub
 
@@ -136,4 +136,15 @@
     End Sub
 
 
+    Private Sub ComboBox2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboYear.SelectedIndexChanged
+        Call loaddata("select sections.section_id, sections.section_name, sections.year_level, sections.course_id, courses.course_code from sections join courses on sections.course_id = courses.course_id where year_level like '%" & cboYear.Text.ToString & "%'", dgvrooms)
+    End Sub
+
+    Private Sub cboCourse_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboCourse.SelectedIndexChanged
+        Call loaddata("select sections.section_id, sections.section_name, sections.year_level, sections.course_id, courses.course_code from sections join courses on sections.course_id = courses.course_id where course_code like '%" & cboCourse.Text.ToString & "%'", dgvrooms)
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Call loaddata("select sections.section_id, sections.section_name, sections.year_level, sections.course_id, courses.course_code from sections join courses on sections.course_id = courses.course_id where year_level like '%" & cboYear.Text.ToString & "%' AND course_code like '%" & cboCourse.Text.ToString & "%'", dgvrooms)
+    End Sub
 End Class

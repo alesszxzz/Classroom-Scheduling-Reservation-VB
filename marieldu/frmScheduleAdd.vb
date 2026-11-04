@@ -97,7 +97,7 @@
         End Using
 
         MsgBox("Schedule successfully saved with no conflicts!", MsgBoxStyle.Information)
-        frmReservation.LoadScheduleData()
+        Scheduling.LoadScheduleData()
         Me.Hide()
     End Sub
 

@@ -175,6 +175,12 @@
     <Compile Include="frmScheduleEdit.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmSchedulesUsers.Designer.vb">
+      <DependentUpon>frmSchedulesUsers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSchedulesUsers.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmSection.Designer.vb">
       <DependentUpon>frmSection.vb</DependentUpon>
     </Compile>
@@ -233,10 +239,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="frmReservation.Designer.vb">
-      <DependentUpon>frmReservation.vb</DependentUpon>
+    <Compile Include="Scheduling.Designer.vb">
+      <DependentUpon>Scheduling.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmReservation.vb">
+    <Compile Include="Scheduling.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
@@ -292,6 +298,9 @@
     <EmbeddedResource Include="frmScheduleEdit.resx">
       <DependentUpon>frmScheduleEdit.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmSchedulesUsers.resx">
+      <DependentUpon>frmSchedulesUsers.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmSection.resx">
       <DependentUpon>frmSection.vb</DependentUpon>
     </EmbeddedResource>
@@ -319,8 +328,8 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmReservation.resx">
-      <DependentUpon>frmReservation.vb</DependentUpon>
+    <EmbeddedResource Include="Scheduling.resx">
+      <DependentUpon>Scheduling.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

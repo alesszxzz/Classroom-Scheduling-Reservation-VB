@@ -2,7 +2,29 @@
 
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Call connection()
-        frmReservation.PopulateFilterComboBox(cboSection, "SELECT DISTINCT section_name FROM sections ORDER BY section_name", "section_name")
+        Dim query As String = "SELECT rooms.room_number FROM reservations JOIN rooms ON reservations.room_id = rooms.room_id group by rooms.room_number order by count(reservations.room_id) desc limit 1"
+
+        Using cmd As New Odbc.OdbcCommand(query, con)
+            Try
+                Dim result = cmd.ExecuteScalar()
+
+                If result IsNot DBNull.Value AndAlso result IsNot Nothing Then
+                    lblmostbook.Text = result.ToString()
+                Else
+                    lblmostbook.Text = "No Bookings"
+                End If
+            Catch ex As Odbc.OdbcException
+                MessageBox.Show("ODBC Database Error: " & ex.Message)
+            Catch ex As Exception
+                MessageBox.Show("Error: " & ex.Message)
+            End Try
+        End Using
+
+
+
+
+        Scheduling.PopulateFilterComboBox(cboSection, "SELECT DISTINCT section_name FROM sections ORDER BY section_name", "section_name")
+        Call loaddata("select rooms.room_number, reservations.reserved_by, reservations.purpose, reservations.reservation_date, reservations.status from reservations join rooms on reservations.room_id = rooms.room_id where status like '%Accepted%'", dgvAccepted)
         Call loaddata("select rooms.room_number, reservations.reserved_by, reservations.purpose, reservations.reservation_date, reservations.status from reservations join rooms on reservations.room_id = rooms.room_id where status like '%Pending%'", dgvrejected)
     End Sub
 
@@ -87,7 +109,7 @@
 
     'Navigation
     Private Sub preservation_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles preservation.Click
-        frmReservation.Show()
+        Scheduling.Show()
         Me.Hide()
     End Sub
 
@@ -141,4 +163,5 @@
         End If
         Call loaddata(query, dgvrooms)
     End Sub
+
 End Class

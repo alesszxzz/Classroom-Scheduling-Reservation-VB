@@ -30,6 +30,15 @@
             MsgBox(ex.Message)
         End Try
 
+        Dim autoRejectedQuery As String = "update reservations set status = 'Rejected' where status = 'Pending' and (reservation_date < CURRENT_DATE()) OR (reservation_date = CURRENT_DATE() AND end_time <= CURRENT_TIME())"
+        Try
+            Using cmdUpdatee As New Odbc.OdbcCommand(autoRejectedQuery, con)
+                cmdUpdatee.ExecuteNonQuery()
+            End Using
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+
         Dim query As String = "SELECT r.reservation_id AS 'ID', rm.room_number AS 'Room', " &
                               "DATE_FORMAT(r.reservation_date, '%Y-%m-%d') AS 'Date', " &
                               "CONCAT(TIME_FORMAT(r.start_time, '%h:%i %p'), ' - ', TIME_FORMAT(r.end_time, '%h:%i %p')) AS 'Time Block', " &
@@ -96,5 +105,9 @@
 
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
         Me.Hide()
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        frmSchedulesUsers.Show()
     End Sub
 End Class

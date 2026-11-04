@@ -1,4 +1,4 @@
-﻿Public Class frmReservation
+﻿Public Class Scheduling
 
     Private Sub Reservation_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Call connection()
