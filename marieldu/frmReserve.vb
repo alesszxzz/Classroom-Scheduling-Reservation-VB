@@ -10,7 +10,6 @@
         btnReject.Visible = isAdmin
         btnBack.Visible = isAdmin
         btnLogOut.Visible = Not isAdmin
-
     End Sub
 
     Public Sub LoadReservations()
