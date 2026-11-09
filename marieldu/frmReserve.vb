@@ -115,4 +115,28 @@
         frmSchedulesUsers.Show()
     End Sub
 
+    Private Sub dgvReservations_CellFormatting(sender As Object, e As DataGridViewCellFormattingEventArgs) Handles dgvReservations.CellFormatting
+        ' Check if we are formatting the 'status' column
+        If dgvReservations.Columns(e.ColumnIndex).Name.Equals("status", StringComparison.OrdinalIgnoreCase) Then
+            If e.Value IsNot Nothing AndAlso Not IsDBNull(e.Value) Then
+                Dim statusValue As String = e.Value.ToString().Trim()
+
+                ' Option A: Highlight just the Status Cell
+                Select Case statusValue
+                    Case "Approved"
+                        e.CellStyle.BackColor = Color.LightGreen
+                        e.CellStyle.ForeColor = Color.DarkGreen
+                    Case "Pending"
+                        e.CellStyle.BackColor = Color.LightGoldenrodYellow
+                        e.CellStyle.ForeColor = Color.DarkOrange
+                    Case "Rejected"
+                        e.CellStyle.BackColor = Color.MistyRose
+                        e.CellStyle.ForeColor = Color.DarkRed
+                    Case "Completed"
+                        e.CellStyle.BackColor = Color.LightBlue
+                        e.CellStyle.ForeColor = Color.DarkBlue
+                End Select
+            End If
+        End If
+    End Sub
 End Class
