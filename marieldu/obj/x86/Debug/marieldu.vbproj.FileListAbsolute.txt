@@ -84,3 +84,4 @@ C:\Users\Mariel D. Leoncio\Documents\Classroom-Scheduling-Reservation-VB\marield
 C:\Users\Mariel D. Leoncio\Documents\Classroom-Scheduling-Reservation-VB\marieldu\obj\x86\Debug\prac.Resources.resources
 C:\Users\Mariel D. Leoncio\Documents\Classroom-Scheduling-Reservation-VB\marieldu\obj\x86\Debug\prac.Scheduling.resources
 C:\Users\Mariel D. Leoncio\Documents\Classroom-Scheduling-Reservation-VB\marieldu\obj\x86\Debug\marieldu.vbproj.GenerateResource.Cache
+C:\Users\PC\Documents\marieldu\marieldu\obj\x86\Debug\prac.frmWeeklySched.resources

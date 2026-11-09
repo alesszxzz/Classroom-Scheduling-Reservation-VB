@@ -10,6 +10,7 @@
         btnReject.Visible = isAdmin
         btnBack.Visible = isAdmin
         btnLogOut.Visible = Not isAdmin
+        btnscheddd.Visible = Not isAdmin
     End Sub
 
     Public Sub LoadReservations()
@@ -139,4 +140,9 @@
             End If
         End If
     End Sub
+
+    Private Sub btnscheddd_Click(sender As Object, e As EventArgs) Handles btnscheddd.Click
+        frmWeeklySched.ShowDialog()
+    End Sub
+
 End Class

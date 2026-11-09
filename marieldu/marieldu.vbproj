@@ -217,6 +217,12 @@
     <Compile Include="frmSubjectsEdit.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmWeeklySched.Designer.vb">
+      <DependentUpon>frmWeeklySched.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmWeeklySched.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frnSignUp.Designer.vb">
       <DependentUpon>frnSignUp.vb</DependentUpon>
     </Compile>
@@ -318,6 +324,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmSubjectsEdit.resx">
       <DependentUpon>frmSubjectsEdit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWeeklySched.resx">
+      <DependentUpon>frmWeeklySched.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frnSignUp.resx">
       <DependentUpon>frnSignUp.vb</DependentUpon>
