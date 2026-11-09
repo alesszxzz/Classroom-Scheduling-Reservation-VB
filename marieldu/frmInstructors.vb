@@ -4,11 +4,29 @@
         Call connection()
         Call loadcombo("select course_id, course_code from courses", cbosearch, "course_code", "course_id")
         Call loadcombo("select teacher_id, last_name from teachers", cbosearchh, "last_name", "teacher_id")
-        Call loaddata("select teachers.teacher_id, teachers.titles, teachers.last_name, teachers.employment_type, courses.course_code, courses.course_id from teachers join courses on teachers.course_id = courses.course_id", dgvrooms)
-        Call loaddata("SELECT teacher_availability.availability_id, teachers.last_name, teacher_availability.day_of_week, teacher_availability.start_time, teacher_availability.end_time FROM teacher_availability JOIN teachers ON teacher_availability.teacher_id = teachers.teacher_id", DataGridView1)
+
+        ' Initialize Tag values to prevent non-numeric operations
+        dgvrooms.Tag = 0
+        DataGridView1.Tag = 0
+
+        Call LoadTeachersGrid()
+        Call LoadAvailabilityGrid()
     End Sub
 
-    'Form Design
+    ' Helper methods to load grids cleanly
+    Public Sub LoadTeachersGrid()
+        Call loaddata("SELECT teachers.teacher_id, teachers.titles, teachers.last_name, teachers.employment_type, courses.course_code, courses.course_id FROM teachers JOIN courses ON teachers.course_id = courses.course_id", dgvrooms)
+        dgvrooms.ClearSelection()
+        dgvrooms.Tag = 0
+    End Sub
+
+    Public Sub LoadAvailabilityGrid()
+        Call loaddata("SELECT teacher_availability.availability_id, teachers.last_name, teacher_availability.day_of_week, teacher_availability.start_time, teacher_availability.end_time FROM teacher_availability JOIN teachers ON teacher_availability.teacher_id = teachers.teacher_id", DataGridView1)
+        DataGridView1.ClearSelection()
+        DataGridView1.Tag = 0
+    End Sub
+
+    ' Form Design & Hover Animations
     Private Sub Panel1_MouseEnter(ByVal sender As Object, ByVal e As System.EventArgs) Handles sidebar.MouseEnter
         sidebar.Width = 176
     End Sub
@@ -74,6 +92,7 @@
     Private Sub Panel1_MouseEnter1(ByVal sender As Object, ByVal e As System.EventArgs) Handles pinstructors.MouseEnter
         sidebar.Width = 176
     End Sub
+
     Private Sub pnlsections_MouseEnter(sender As Object, e As EventArgs) Handles pnlsections.MouseEnter
         sidebar.Width = 176
         pnlsections.BackColor = Color.PeachPuff
@@ -83,15 +102,14 @@
         pnlsections.BackColor = Color.Transparent
     End Sub
 
-
-    'Navigation -=-=-==-=-==-=-=
-
+    ' Navigation Handlers
     Private Sub plogout_MouseClick(sender As Object, e As MouseEventArgs) Handles plogout.MouseClick
         frmLogIn.Show()
         Me.Hide()
         frmLogIn.txtpass.Clear()
         frmLogIn.txtusername.Clear()
     End Sub
+
     Private Sub psubs_MouseClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles psubs.MouseClick
         frmSubjects.Show()
         Me.Hide()
@@ -116,108 +134,129 @@
         frmCourses.Show()
         Me.Hide()
     End Sub
+
     Private Sub pnlsections_MouseClick(sender As Object, e As MouseEventArgs) Handles pnlsections.MouseClick
         frmSection.Show()
         Me.Hide()
     End Sub
 
+    ' Action Buttons
     Private Sub btnadd_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnadd.Click
-        If dgvrooms.Tag <> 0 Then
-            dgvrooms.Tag = 0
-            frmInsAddChoice.ShowDialog()
-        Else
-            frmInsAddChoice.ShowDialog()
-        End If
+        dgvrooms.Tag = 0
+        frmInsAddChoice.ShowDialog()
     End Sub
 
-
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
-        If dgvrooms.Tag <> 0 Then
+        If Val(dgvrooms.Tag) <> 0 Then
             frminstructorEdit.ShowDialog()
         Else
-            MsgBox("Please select a record!")
+            MsgBox("Please select an instructor record from the table first!", MsgBoxStyle.Exclamation)
         End If
     End Sub
 
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
-        Dim cmd As Odbc.OdbcCommand
         Dim results As DialogResult
         Try
+            ' Priority 1: Delete Availability if selected
             If Val(DataGridView1.Tag) <> 0 Then
-                ' Delete Teacher Availability Record
-                results = MessageBox.Show("Are you sure you want to delete this availability record?", "Confirm", MessageBoxButtons.YesNo)
+                results = MessageBox.Show("Are you sure you want to delete this availability record?", "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
                 If results = DialogResult.Yes Then
                     If con.State = ConnectionState.Closed Then con.Open()
 
-                    cmd = New Odbc.OdbcCommand("DELETE FROM teacher_availability WHERE availability_id=" & Val(DataGridView1.Tag), con)
-                    cmd.ExecuteNonQuery()
+                    Using cmd As New Odbc.OdbcCommand("DELETE FROM teacher_availability WHERE availability_id=" & Val(DataGridView1.Tag), con)
+                        cmd.ExecuteNonQuery()
+                    End Using
 
-                    Call loaddata("SELECT a.availability_id, t.last_name, a.day_of_week, a.start_time, a.end_time FROM teacher_availability a JOIN teachers t ON a.teacher_id = t.teacher_id", DataGridView1)
-                    DataGridView1.Tag = 0
-                    MsgBox("Availability deleted successfully!")
-                Else
-                    MsgBox("Cancelled")
+                    Call LoadAvailabilityGrid()
+                    MsgBox("Availability deleted successfully!", MsgBoxStyle.Information)
                 End If
 
+                ' Priority 2: Delete Teacher if selected
             ElseIf Val(dgvrooms.Tag) <> 0 Then
-                ' Delete Teacher Record
-                results = MessageBox.Show("Are you sure you want to delete this teacher?", "Confirm", MessageBoxButtons.YesNo)
+                results = MessageBox.Show("Are you sure you want to delete this teacher record?", "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
                 If results = DialogResult.Yes Then
                     If con.State = ConnectionState.Closed Then con.Open()
 
-                    cmd = New Odbc.OdbcCommand("DELETE FROM teachers WHERE teacher_id=" & Val(dgvrooms.Tag), con)
-                    cmd.ExecuteNonQuery()
+                    Using cmd As New Odbc.OdbcCommand("DELETE FROM teachers WHERE teacher_id=" & Val(dgvrooms.Tag), con)
+                        cmd.ExecuteNonQuery()
+                    End Using
 
-                    Call loaddata("SELECT * FROM teachers", dgvrooms)
-                    dgvrooms.Tag = 0
-                    MsgBox("Teacher deleted successfully!")
-                Else
-                    MsgBox("Cancelled")
+                    Call LoadTeachersGrid()
+                    MsgBox("Teacher deleted successfully!", MsgBoxStyle.Information)
                 End If
 
             Else
                 MsgBox("Please select a record you want to delete!", MsgBoxStyle.Information)
             End If
         Catch ex As Exception
-            MsgBox(ex.Message)
+            MsgBox("Error executing delete: " & ex.Message, MsgBoxStyle.Critical)
         End Try
     End Sub
 
+    ' Grid CellClick Events
     Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
-        If e.RowIndex >= 0 Then
-            DataGridView1.Tag = DataGridView1.Item(0, e.RowIndex).Value
-            MsgBox(DataGridView1.Tag)
+        If e.RowIndex >= 0 AndAlso Not DataGridView1.Rows(e.RowIndex).IsNewRow Then
+            DataGridView1.Tag = DataGridView1.Rows(e.RowIndex).Cells(0).Value
+            ' Deselect teacher grid to avoid ambiguous deletes
+            dgvrooms.Tag = 0
         End If
     End Sub
 
     Private Sub dgvrooms_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvrooms.CellClick
         Try
-            If e.RowIndex >= 0 Then
-                dgvrooms.Tag = dgvrooms.Item(0, e.RowIndex).Value
-                frminstructorEdit.txttitles.Text = dgvrooms.Item(1, e.RowIndex).Value
-                frminstructorEdit.txtlname.Text = dgvrooms.Item(2, e.RowIndex).Value
-                frminstructorEdit.cboemploymenttype.SelectedItem = dgvrooms.Item(3, e.RowIndex).Value
-                frminstructorEdit.cbodept.SelectedIndex = dgvrooms.Item(5, e.RowIndex).Value - 1
+            ' Ignore clicks on headers or empty area
+            If e.RowIndex < 0 OrElse dgvrooms.Rows(e.RowIndex).IsNewRow Then Exit Sub
+
+            Dim selectedRow As DataGridViewRow = dgvrooms.Rows(e.RowIndex)
+
+            ' Store teacher_id in Tag and clear availability tag
+            dgvrooms.Tag = selectedRow.Cells(0).Value
+            DataGridView1.Tag = 0
+
+            ' Populate Title & Last Name
+            frminstructorEdit.txttitles.Text = If(selectedRow.Cells(1).Value IsNot Nothing, selectedRow.Cells(1).Value.ToString(), "")
+            frminstructorEdit.txtlname.Text = If(selectedRow.Cells(2).Value IsNot Nothing, selectedRow.Cells(2).Value.ToString(), "")
+
+            ' Populate Employment Type ComboBox
+            If selectedRow.Cells(3).Value IsNot Nothing Then
+                frminstructorEdit.cboemploymenttype.Text = selectedRow.Cells(3).Value.ToString()
             End If
+
+            ' Match Department by Course Code (Column 4: "BSIT", "BSED", etc.)
+            If selectedRow.Cells(4).Value IsNot Nothing Then
+                Dim targetDept As String = selectedRow.Cells(4).Value.ToString()
+                Dim matchIndex As Integer = -1
+
+                For i As Integer = 0 To frminstructorEdit.cbodept.Items.Count - 1
+                    If frminstructorEdit.cbodept.Items(i).ToString() = targetDept Then
+                        matchIndex = i
+                        Exit For
+                    End If
+                Next
+
+                frminstructorEdit.cbodept.SelectedIndex = matchIndex
+            End If
+
         Catch ex As Exception
-            MsgBox(ex.Message)
+            MsgBox("Error binding selected row: " & ex.Message, MsgBoxStyle.Critical)
         End Try
-        
     End Sub
 
+    ' Search Box TextChanged Events
     Private Sub cbosearch_TextChanged(sender As Object, e As EventArgs) Handles cbosearch.TextChanged
-        If cbosearch.Text <> "" Then
-            Call loaddata("select teachers.teacher_id, teachers.titles, teachers.last_name, teachers.employment_type, courses.course_code, courses.course_id from teachers join courses on teachers.course_id = courses.course_id where course_code like '%" & cbosearch.Text.ToString & "%'", dgvrooms)
+        If Trim(cbosearch.Text) <> "" Then
+            Call loaddata("SELECT teachers.teacher_id, teachers.titles, teachers.last_name, teachers.employment_type, courses.course_code, courses.course_id FROM teachers JOIN courses ON teachers.course_id = courses.course_id WHERE courses.course_code LIKE '%" & Trim(cbosearch.Text) & "%'", dgvrooms)
         Else
-            Call loaddata("select teachers.teacher_id, teachers.titles, teachers.last_name, teachers.employment_type, courses.course_code, courses.course_id from teachers join courses on teachers.course_id = courses.course_id", dgvrooms)
+            Call LoadTeachersGrid()
         End If
     End Sub
 
     Private Sub cbosearchh_TextChanged(sender As Object, e As EventArgs) Handles cbosearchh.TextChanged
-        If cbosearchh.Text <> "" Then
-            Call loaddata("SELECT teacher_availability.availability_id, teachers.last_name, teacher_availability.day_of_week, teacher_availability.start_time, teacher_availability.end_time FROM teacher_availability JOIN teachers ON teacher_availability.teacher_id = teachers.teacher_id where teachers.last_name like '%" & cbosearchh.Text.ToString & "%'", DataGridView1)
+        If Trim(cbosearchh.Text) <> "" Then
+            Call loaddata("SELECT teacher_availability.availability_id, teachers.last_name, teacher_availability.day_of_week, teacher_availability.start_time, teacher_availability.end_time FROM teacher_availability JOIN teachers ON teacher_availability.teacher_id = teachers.teacher_id WHERE teachers.last_name LIKE '%" & Trim(cbosearchh.Text) & "%'", DataGridView1)
         Else
-            Call loaddata("SELECT teacher_availability.availability_id, teachers.last_name, teacher_availability.day_of_week, teacher_availability.start_time, teacher_availability.end_time FROM teacher_availability JOIN teachers ON teacher_availability.teacher_id = teachers.teacher_id", DataGridView1)
+            Call LoadAvailabilityGrid()
         End If
     End Sub
+
 End Class

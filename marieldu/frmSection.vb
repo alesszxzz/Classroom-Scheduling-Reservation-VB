@@ -147,4 +147,28 @@
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Call loaddata("select sections.section_id, sections.section_name, sections.year_level, sections.course_id, courses.course_code from sections join courses on sections.course_id = courses.course_id where year_level like '%" & cboYear.Text.ToString & "%' AND course_code like '%" & cboCourse.Text.ToString & "%'", dgvrooms)
     End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Dim cmd As Odbc.OdbcCommand
+        Dim results As DialogResult
+        Try
+            If dgvrooms.Tag <> 0 Then
+                results = MessageBox.Show("Are you sure you want to delete this?", "Confirm", MessageBoxButtons.YesNo)
+                If results = DialogResult.Yes Then
+                    cmd = New Odbc.OdbcCommand("delete from sections where section_id=" & dgvrooms.Tag, con)
+                    cmd.ExecuteNonQuery()
+                    Call loaddata("select * from sections", dgvrooms)
+                    MsgBox("Deleted successfully!")
+                    dgvrooms.Tag = 0
+                Else
+                    MsgBox("Cancelled")
+                End If
+            Else
+                MsgBox("Please select a record you want to delete!")
+            End If
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
 End Class
