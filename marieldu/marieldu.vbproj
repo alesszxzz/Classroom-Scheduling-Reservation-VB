@@ -400,6 +400,9 @@
   <ItemGroup>
     <None Include="Resources\icons8-search-15.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\da627270-b8a6-4cbe-9fdb-3ec3d6075d93.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

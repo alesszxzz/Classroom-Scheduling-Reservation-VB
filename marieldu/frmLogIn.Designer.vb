@@ -27,13 +27,13 @@ Partial Class frmLogIn
         Me.Label2 = New System.Windows.Forms.Label()
         Me.btnlogin = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.eyeee = New System.Windows.Forms.PictureBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.eyeee = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
         CType(Me.eyeee, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -104,19 +104,6 @@ Partial Class frmLogIn
         Me.Panel1.Size = New System.Drawing.Size(457, 560)
         Me.Panel1.TabIndex = 5
         '
-        'eyeee
-        '
-        Me.eyeee.BackgroundImage = Global.prac.My.Resources.Resources.icons8_eye_24
-        Me.eyeee.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.eyeee.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.eyeee.Location = New System.Drawing.Point(397, 300)
-        Me.eyeee.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.eyeee.Name = "eyeee"
-        Me.eyeee.Size = New System.Drawing.Size(21, 23)
-        Me.eyeee.TabIndex = 12
-        Me.eyeee.TabStop = False
-        Me.eyeee.Visible = False
-        '
         'Label5
         '
         Me.Label5.AutoSize = True
@@ -128,28 +115,6 @@ Partial Class frmLogIn
         Me.Label5.Size = New System.Drawing.Size(71, 23)
         Me.Label5.TabIndex = 11
         Me.Label5.Text = "Sign Up"
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = Global.prac.My.Resources.Resources.icons8_locked_48
-        Me.PictureBox2.Location = New System.Drawing.Point(43, 260)
-        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(27, 34)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox2.TabIndex = 10
-        Me.PictureBox2.TabStop = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.prac.My.Resources.Resources.icons8_user_48
-        Me.PictureBox1.Location = New System.Drawing.Point(43, 175)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(27, 34)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 9
-        Me.PictureBox1.TabStop = False
         '
         'Label4
         '
@@ -184,9 +149,46 @@ Partial Class frmLogIn
         Me.Label1.TabIndex = 5
         Me.Label1.Text = "Username"
         '
+        'eyeee
+        '
+        Me.eyeee.BackgroundImage = Global.prac.My.Resources.Resources.icons8_eye_24
+        Me.eyeee.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.eyeee.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.eyeee.Location = New System.Drawing.Point(397, 300)
+        Me.eyeee.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.eyeee.Name = "eyeee"
+        Me.eyeee.Size = New System.Drawing.Size(21, 23)
+        Me.eyeee.TabIndex = 12
+        Me.eyeee.TabStop = False
+        Me.eyeee.Visible = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = Global.prac.My.Resources.Resources.icons8_locked_48
+        Me.PictureBox2.Location = New System.Drawing.Point(43, 260)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(27, 34)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox2.TabIndex = 10
+        Me.PictureBox2.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.prac.My.Resources.Resources.icons8_user_48
+        Me.PictureBox1.Location = New System.Drawing.Point(43, 175)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(27, 34)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 9
+        Me.PictureBox1.TabStop = False
+        '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.Tan
+        Me.Panel2.BackgroundImage = Global.prac.My.Resources.Resources.da627270_b8a6_4cbe_9fdb_3ec3d6075d93
+        Me.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Panel2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
@@ -226,8 +228,8 @@ Partial Class frmLogIn
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents Panel2 As System.Windows.Forms.Panel
     Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents eyeee As System.Windows.Forms.PictureBox
+    Friend WithEvents Panel2 As System.Windows.Forms.Panel
 End Class
