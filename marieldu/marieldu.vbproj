@@ -97,6 +97,12 @@
     <Compile Include="frmCoursesEdit.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmforgotpass.Designer.vb">
+      <DependentUpon>frmforgotpass.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmforgotpass.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmInsAddChoice.Designer.vb">
       <DependentUpon>frmInsAddChoice.vb</DependentUpon>
     </Compile>
@@ -264,6 +270,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCoursesEdit.resx">
       <DependentUpon>frmCoursesEdit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmforgotpass.resx">
+      <DependentUpon>frmforgotpass.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmInsAddChoice.resx">
       <DependentUpon>frmInsAddChoice.vb</DependentUpon>

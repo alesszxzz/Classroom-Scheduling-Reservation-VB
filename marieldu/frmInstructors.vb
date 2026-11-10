@@ -3,7 +3,7 @@
     Private Sub frmInstructors_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Call connection()
         Call loadcombo("select course_id, course_code from courses", cbosearch, "course_code", "course_id")
-        Call loadcombo("select teacher_id, last_name from teachers", cbosearchh, "last_name", "teacher_id")
+        Call loadcombo("SELECT teacher_id, last_name FROM teachers WHERE employment_type = 'Part-Time'", cbosearchh, "last_name", "teacher_id")
 
         ' Initialize Tag values to prevent non-numeric operations
         dgvrooms.Tag = 0

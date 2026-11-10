@@ -22,9 +22,9 @@ Partial Class frmReserve
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
@@ -55,8 +55,9 @@ Partial Class frmReserve
         Me.Panel1.Controls.Add(Me.Label8)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1064, 53)
+        Me.Panel1.Size = New System.Drawing.Size(1419, 65)
         Me.Panel1.TabIndex = 8
         '
         'Label8
@@ -65,8 +66,9 @@ Partial Class frmReserve
         Me.Label8.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label8.Font = New System.Drawing.Font("MV Boli", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.Location = New System.Drawing.Point(0, 0)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(1064, 53)
+        Me.Label8.Size = New System.Drawing.Size(1419, 65)
         Me.Label8.TabIndex = 0
         Me.Label8.Text = "CSTA Lab Scheduling && Reservation"
         Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -82,9 +84,10 @@ Partial Class frmReserve
         Me.Panel3.Controls.Add(Me.btnApproved)
         Me.Panel3.Controls.Add(Me.btnadd)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel3.Location = New System.Drawing.Point(0, 611)
+        Me.Panel3.Location = New System.Drawing.Point(0, 752)
+        Me.Panel3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(1064, 70)
+        Me.Panel3.Size = New System.Drawing.Size(1419, 86)
         Me.Panel3.TabIndex = 10
         '
         'btnscheddd
@@ -95,9 +98,10 @@ Partial Class frmReserve
         Me.btnscheddd.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnscheddd.Font = New System.Drawing.Font("SketchFlow Print", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnscheddd.Image = Global.prac.My.Resources.Resources.icons8_add_24
-        Me.btnscheddd.Location = New System.Drawing.Point(189, 20)
+        Me.btnscheddd.Location = New System.Drawing.Point(252, 25)
+        Me.btnscheddd.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnscheddd.Name = "btnscheddd"
-        Me.btnscheddd.Size = New System.Drawing.Size(160, 38)
+        Me.btnscheddd.Size = New System.Drawing.Size(213, 47)
         Me.btnscheddd.TabIndex = 6
         Me.btnscheddd.Text = "Weekly Schedule"
         Me.btnscheddd.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -112,9 +116,10 @@ Partial Class frmReserve
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button1.Font = New System.Drawing.Font("SketchFlow Print", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.Image = Global.prac.My.Resources.Resources.icons8_add_24
-        Me.Button1.Location = New System.Drawing.Point(936, 20)
+        Me.Button1.Location = New System.Drawing.Point(1248, 25)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(116, 38)
+        Me.Button1.Size = New System.Drawing.Size(155, 47)
         Me.Button1.TabIndex = 5
         Me.Button1.Text = "Schedules"
         Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -129,9 +134,10 @@ Partial Class frmReserve
         Me.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnBack.Font = New System.Drawing.Font("SketchFlow Print", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBack.Image = Global.prac.My.Resources.Resources.icons8_add_24
-        Me.btnBack.Location = New System.Drawing.Point(38, 20)
+        Me.btnBack.Location = New System.Drawing.Point(51, 25)
+        Me.btnBack.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnBack.Name = "btnBack"
-        Me.btnBack.Size = New System.Drawing.Size(92, 38)
+        Me.btnBack.Size = New System.Drawing.Size(123, 47)
         Me.btnBack.TabIndex = 3
         Me.btnBack.Text = "Back"
         Me.btnBack.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -146,9 +152,10 @@ Partial Class frmReserve
         Me.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnLogOut.Font = New System.Drawing.Font("SketchFlow Print", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnLogOut.Image = Global.prac.My.Resources.Resources.icons8_add_24
-        Me.btnLogOut.Location = New System.Drawing.Point(38, 20)
+        Me.btnLogOut.Location = New System.Drawing.Point(51, 25)
+        Me.btnLogOut.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnLogOut.Name = "btnLogOut"
-        Me.btnLogOut.Size = New System.Drawing.Size(129, 38)
+        Me.btnLogOut.Size = New System.Drawing.Size(172, 47)
         Me.btnLogOut.TabIndex = 4
         Me.btnLogOut.Text = "Log Out"
         Me.btnLogOut.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -163,9 +170,10 @@ Partial Class frmReserve
         Me.btnReject.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnReject.Font = New System.Drawing.Font("SketchFlow Print", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnReject.Image = Global.prac.My.Resources.Resources.icons8_add_24
-        Me.btnReject.Location = New System.Drawing.Point(701, 20)
+        Me.btnReject.Location = New System.Drawing.Point(935, 25)
+        Me.btnReject.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnReject.Name = "btnReject"
-        Me.btnReject.Size = New System.Drawing.Size(92, 38)
+        Me.btnReject.Size = New System.Drawing.Size(123, 47)
         Me.btnReject.TabIndex = 2
         Me.btnReject.Text = "Reject"
         Me.btnReject.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -180,9 +188,10 @@ Partial Class frmReserve
         Me.btnApproved.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnApproved.Font = New System.Drawing.Font("SketchFlow Print", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnApproved.Image = Global.prac.My.Resources.Resources.icons8_add_24
-        Me.btnApproved.Location = New System.Drawing.Point(567, 20)
+        Me.btnApproved.Location = New System.Drawing.Point(756, 25)
+        Me.btnApproved.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnApproved.Name = "btnApproved"
-        Me.btnApproved.Size = New System.Drawing.Size(107, 38)
+        Me.btnApproved.Size = New System.Drawing.Size(143, 47)
         Me.btnApproved.TabIndex = 1
         Me.btnApproved.Text = "Approve"
         Me.btnApproved.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -197,9 +206,10 @@ Partial Class frmReserve
         Me.btnadd.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnadd.Font = New System.Drawing.Font("SketchFlow Print", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnadd.Image = Global.prac.My.Resources.Resources.icons8_add_24
-        Me.btnadd.Location = New System.Drawing.Point(819, 20)
+        Me.btnadd.Location = New System.Drawing.Point(1092, 25)
+        Me.btnadd.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnadd.Name = "btnadd"
-        Me.btnadd.Size = New System.Drawing.Size(92, 38)
+        Me.btnadd.Size = New System.Drawing.Size(123, 47)
         Me.btnadd.TabIndex = 0
         Me.btnadd.Text = "Add"
         Me.btnadd.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -216,9 +226,10 @@ Partial Class frmReserve
         Me.Panel4.Controls.Add(Me.Label1)
         Me.Panel4.Controls.Add(Me.Panel2)
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel4.Location = New System.Drawing.Point(0, 53)
+        Me.Panel4.Location = New System.Drawing.Point(0, 65)
+        Me.Panel4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(1064, 558)
+        Me.Panel4.Size = New System.Drawing.Size(1419, 687)
         Me.Panel4.TabIndex = 11
         '
         'Label4
@@ -227,9 +238,10 @@ Partial Class frmReserve
         Me.Label4.BackColor = System.Drawing.Color.MistyRose
         Me.Label4.Font = New System.Drawing.Font("Nirmala Text", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.DarkRed
-        Me.Label4.Location = New System.Drawing.Point(934, 12)
+        Me.Label4.Location = New System.Drawing.Point(1245, 15)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(73, 27)
+        Me.Label4.Size = New System.Drawing.Size(97, 33)
         Me.Label4.TabIndex = 8
         Me.Label4.Text = "Rejected"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -240,9 +252,10 @@ Partial Class frmReserve
         Me.Label3.BackColor = System.Drawing.Color.LightGoldenrodYellow
         Me.Label3.Font = New System.Drawing.Font("Nirmala Text", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.DarkOrange
-        Me.Label3.Location = New System.Drawing.Point(855, 12)
+        Me.Label3.Location = New System.Drawing.Point(1140, 15)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(73, 27)
+        Me.Label3.Size = New System.Drawing.Size(97, 33)
         Me.Label3.TabIndex = 7
         Me.Label3.Text = "Pending"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -253,9 +266,10 @@ Partial Class frmReserve
         Me.Label2.BackColor = System.Drawing.Color.LightBlue
         Me.Label2.Font = New System.Drawing.Font("Nirmala Text", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.DarkBlue
-        Me.Label2.Location = New System.Drawing.Point(776, 12)
+        Me.Label2.Location = New System.Drawing.Point(1035, 15)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(73, 27)
+        Me.Label2.Size = New System.Drawing.Size(97, 33)
         Me.Label2.TabIndex = 6
         Me.Label2.Text = "Completed"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -266,11 +280,12 @@ Partial Class frmReserve
         Me.Label1.BackColor = System.Drawing.Color.LightGreen
         Me.Label1.Font = New System.Drawing.Font("Nirmala Text", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.DarkGreen
-        Me.Label1.Location = New System.Drawing.Point(701, 12)
+        Me.Label1.Location = New System.Drawing.Point(935, 15)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(69, 27)
+        Me.Label1.Size = New System.Drawing.Size(92, 33)
         Me.Label1.TabIndex = 5
-        Me.Label1.Text = "Accepted"
+        Me.Label1.Text = "Approved"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Panel2
@@ -281,9 +296,10 @@ Partial Class frmReserve
         Me.Panel2.BackColor = System.Drawing.Color.Cornsilk
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel2.Controls.Add(Me.dgvReservations)
-        Me.Panel2.Location = New System.Drawing.Point(51, 47)
+        Me.Panel2.Location = New System.Drawing.Point(68, 58)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(967, 467)
+        Me.Panel2.Size = New System.Drawing.Size(1289, 574)
         Me.Panel2.TabIndex = 4
         '
         'dgvReservations
@@ -292,49 +308,50 @@ Partial Class frmReserve
         Me.dgvReservations.AllowUserToDeleteRows = False
         Me.dgvReservations.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvReservations.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.BlanchedAlmond
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Javanese Text", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.ControlLightLight
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvReservations.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.BlanchedAlmond
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Javanese Text", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.ControlLightLight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvReservations.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvReservations.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Moccasin
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvReservations.DefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Moccasin
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvReservations.DefaultCellStyle = DataGridViewCellStyle2
         Me.dgvReservations.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvReservations.EnableHeadersVisualStyles = False
         Me.dgvReservations.Location = New System.Drawing.Point(0, 0)
+        Me.dgvReservations.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.dgvReservations.Name = "dgvReservations"
         Me.dgvReservations.ReadOnly = True
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.PeachPuff
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.Desktop
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvReservations.RowHeadersDefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.PeachPuff
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.Desktop
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvReservations.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.dgvReservations.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvReservations.Size = New System.Drawing.Size(965, 465)
+        Me.dgvReservations.Size = New System.Drawing.Size(1287, 572)
         Me.dgvReservations.TabIndex = 0
         '
         'frmReserve
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1064, 681)
+        Me.ClientSize = New System.Drawing.Size(1419, 838)
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel1)
-        Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "frmReserve"
         Me.Text = "frmReserve"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
